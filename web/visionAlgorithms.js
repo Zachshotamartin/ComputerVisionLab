@@ -12,6 +12,14 @@ export function hueDistance(a, b) {
   return Math.min(difference, 360 - difference);
 }
 
+export function hueToHex(hue) {
+  if (!Number.isFinite(hue)) throw new Error('Hue must be a finite number.');
+  const segment = ((hue % 360 + 360) % 360) / 60;
+  const x = Math.round(255 * (1 - Math.abs(segment % 2 - 1)));
+  const rgb = [[255, x, 0], [x, 255, 0], [0, 255, x], [0, x, 255], [x, 0, 255], [255, 0, x]][Math.floor(segment)];
+  return '#' + rgb.map(channel => channel.toString(16).padStart(2, '0')).join('');
+}
+
 export function clipRegion(region, width, height) {
   if (![region.x, region.y, region.width, region.height].every(Number.isFinite)) return null;
   const left = Math.max(0, Math.floor(Math.min(region.x, region.x + region.width)));
@@ -69,11 +77,12 @@ export function processImage({ data, width, height }, options = {}) {
   if (mode === 'blur') return { data: boxBlur(data, width, height, Math.max(1, Math.min(20, Math.round(amount / 12)))), width, height, boxes, selectedPixels };
   if (mode === 'color' || mode === 'overlay') {
     if (!/^#[a-f\d]{6}$/i.test(color)) throw new Error('Choose a six-digit hex color.');
-    const target = rgbToHsv(...[1, 3, 5].map(offset => parseInt(color.slice(offset, offset + 2), 16)))[0];
+    const [target, targetSaturation] = rgbToHsv(...[1, 3, 5].map(offset => parseInt(color.slice(offset, offset + 2), 16)));
     const mask = new Uint8Array(width * height);
     for (let i = 0; i < mask.length; i++) {
       const [h, s, v] = rgbToHsv(data[i * 4], data[i * 4 + 1], data[i * 4 + 2]);
-      mask[i] = hueDistance(h, target) <= tolerance && s >= .35 && v >= .18 ? 1 : 0;
+      // Achromatic targets have no hue; muted colors still need to be trackable.
+      mask[i] = targetSaturation >= .15 && hueDistance(h, target) <= tolerance && s >= .15 && v >= .18 ? 1 : 0;
       selectedPixels += mask[i];
       if (!mask[i] && mode === 'color') for (let channel = 0; channel < 3; channel++) output[i * 4 + channel] = gray[i] * .42;
     }
