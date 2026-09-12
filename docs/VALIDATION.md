@@ -8,7 +8,7 @@ Verified locally on 2026-09-12:
 - A new parking run with 300 sampled images per class: 480 training and 120 test images. See `verification/parking.json`; this is an internal split, not a camera-held-out benchmark.
 - A one-epoch weather training smoke test with 32 training and 12 validation images, including checkpoint save and final validation on the SSD path containing an apostrophe. This checks the workflow, not model quality.
 - Both the repaired original Xcode project and the independent native build script compile successfully. Physical-camera tracking was not exercised by automated tests.
-- Portfolio integration passed 213 unit tests, lint, and a 45-route production build. Four browser scenarios passed: real processing/export/source download, keyboard redaction/undo, mobile uploads/denied camera, and camera/worker cleanup on navigation.
+- Portfolio integration against the latest main passed 209 unit tests, lint, and a 44-route production build. Four browser scenarios passed: real processing/export/source link, keyboard redaction/undo, mobile uploads/denied camera, and camera/worker cleanup on navigation. The integration is tracked in [portfolio PR #51](https://github.com/Zachshotamartin/Portfolio/pull/51).
 
 ## Remaining prerequisites and limits
 
