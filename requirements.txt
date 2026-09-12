@@ -1,0 +1,6 @@
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+scikit-learn>=1.5,<2
+ultralytics>=8.3,<9
+PyYAML>=6,<7
+joblib>=1.4,<2

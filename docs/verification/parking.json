@@ -1,0 +1,27 @@
+{
+  "seed": 42,
+  "classes": [
+    "empty",
+    "not_empty"
+  ],
+  "training_samples": 480,
+  "test_samples": 120,
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      60,
+      0
+    ],
+    [
+      0,
+      60
+    ]
+  ],
+  "best_parameters": {
+    "svc__C": 1,
+    "svc__gamma": "scale"
+  },
+  "skipped_files": [],
+  "evaluation": "Internal stratified image split with duplicate feature vectors removed. Not a held-out camera or location benchmark."
+}

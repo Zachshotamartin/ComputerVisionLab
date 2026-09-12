@@ -1,0 +1,58 @@
+[
+  {
+    "name": "weather",
+    "checkpoint": "imageclassification/weather_classifier/runs/classify/train/weights/best.pt",
+    "input": "imageclassification/weather_classifier/data/val/sunrise/sunrise33.jpg",
+    "result": [
+      {
+        "name": "sunrise",
+        "class": 3,
+        "confidence": 1.0
+      },
+      {
+        "name": "shine",
+        "class": 2,
+        "confidence": 0.0
+      },
+      {
+        "name": "rain",
+        "class": 1,
+        "confidence": 0.0
+      },
+      {
+        "name": "cloudy",
+        "class": 0,
+        "confidence": 0.0
+      }
+    ]
+  },
+  {
+    "name": "alpaca",
+    "checkpoint": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/runs/detect/train3/weights/best.pt",
+    "input": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/data/images/test/ec522d35b7604195.jpg",
+    "result": [
+      {
+        "name": "alpaca",
+        "class": 0,
+        "confidence": 0.73938,
+        "box": {
+          "x1": 165.28564,
+          "y1": 9.81894,
+          "x2": 1005.37244,
+          "y2": 722.1712
+        }
+      },
+      {
+        "name": "alpaca",
+        "class": 0,
+        "confidence": 0.63554,
+        "box": {
+          "x1": 6.91162,
+          "y1": 20.24502,
+          "x2": 853.85022,
+          "y2": 705.7041
+        }
+      }
+    ]
+  }
+]

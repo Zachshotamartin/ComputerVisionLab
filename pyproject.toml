@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zach-computer-vision-lab"
+version = "1.0.0"
+description = "Repaired OpenCV, classification, and object-detection experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "opencv-python>=4.10,<5", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+models = ["ultralytics>=8.3,<9"]
+parking = ["scikit-learn>=1.5,<2", "joblib>=1.4,<2"]
+
+[project.scripts]
+vision-lab = "visionlab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["visionlab*"]
+
+[project.urls]
+Repository = "https://github.com/Zachshotamartin/ComputerVisionLab"

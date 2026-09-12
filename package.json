@@ -1,0 +1,33 @@
+{
+  "name": "@zachshotamartin/computer-vision-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable OpenCV projects and an interactive browser vision workbench.",
+  "exports": {
+    ".": "./web/index.jsx",
+    "./algorithms": "./web/visionAlgorithms.js",
+    "./style.css": "./web/vision.css"
+  },
+  "files": [
+    "web"
+  ],
+  "scripts": {
+    "test": "node --test web/tests/*.test.js",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zachshotamartin/ComputerVisionLab.git"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.4",
+    "vite": "^8.2.1"
+  }
+}

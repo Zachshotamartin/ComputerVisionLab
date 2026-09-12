@@ -1,0 +1,8 @@
+{
+  "bird.webp": "Resized archive basics/mycode/data/bird.jpg; originally used in the OpenCV course exercises.",
+  "cover.webp": "Computed hue mask and connected-region bounds from the repaired Python code.",
+  "edges.webp": "Computed Canny edges from the repaired Python code.",
+  "markers.png": "Deterministic geometric test fixture created by this script.",
+  "alpaca-prediction.webp": "Fresh CPU inference from the user-trained archive checkpoint; source and boxes recorded in verification/checkpoint-predictions.json.",
+  "weather-prediction.webp": "Fresh CPU inference from the user-trained archive checkpoint; source and probabilities recorded in verification/checkpoint-predictions.json."
+}
