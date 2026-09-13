@@ -10,7 +10,7 @@ Working image-processing, classification, detection, and camera experiments, reb
 | --- | --- | --- |
 | Image processing | Read, export, crop, resize, threshold, blur, find contours and edges | [Python](python/visionlab/imaging.py), [browser algorithms](web/visionAlgorithms.js) |
 | Color tracking | Circular HSV selection and independent connected regions | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
-| Redaction | Automatic frontal-face detection in Python; manually selected pixelation in the browser | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
+| Redaction | Automatic face detection and manual region pixelation in Python and the browser | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
 | Weather classification | Restore an existing YOLOv8 classifier or train with explicit validation | [CLI](python/visionlab/cli.py) |
 | Parking classification | Reproducible SVM with shared preprocessing, duplicate removal, and cross-validation | [Parking pipeline](python/visionlab/parking.py) |
 | Alpaca detection | Validate annotations, train, and stream predictions from saved checkpoints | [Dataset configuration](configs/alpaca.yaml) |

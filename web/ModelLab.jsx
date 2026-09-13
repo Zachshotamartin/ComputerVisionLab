@@ -56,6 +56,7 @@ export default function ModelLab({assetBase='/assets/computer-vision/'}) {
   if(!pixels||busy)return;
   setBusy(true);setError('');setResult(null);setStatus('Preparing this model…');
   const id=++request.current;
+  try {
   if(!engine.current)engine.current=new Worker(new URL('./model.worker.js',import.meta.url),{type:'module'});
   engine.current.onmessage=({data})=>{
    if(data.id!==request.current)return;
@@ -67,6 +68,7 @@ export default function ModelLab({assetBase='/assets/computer-vision/'}) {
   engine.current.onerror=()=>{if(id===request.current){cancel('Prediction stopped.');setError('The local model engine could not start. Try again or reload this page.');}};
   const data=pixels.data.slice();
   engine.current.postMessage({id,model:modelId,image:{data,width:pixels.width,height:pixels.height},options:{assetBase:base,threshold:.05}},[data.buffer]);
+  } catch {cancel('Prediction stopped.');setError('The local model engine could not start. Try again or reload this page.');}
  }
  function save(){
   if(!result||busy)return;

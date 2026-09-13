@@ -1,5 +1,5 @@
 import { useId, useState } from 'react';
-import { hueToHex, rgbToHsv } from '@zachshotamartin/computer-vision-lab/algorithms';
+import { hueToHex, rgbToHsv } from './visionAlgorithms.js';
 
 const swatches = [
   ['Red', '#d95c43'], ['Yellow', '#d9b344'], ['Green', '#648977'],
