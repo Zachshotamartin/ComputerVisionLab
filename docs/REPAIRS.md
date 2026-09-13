@@ -20,7 +20,7 @@ python -m visionlab.cli parking --source /path/to/parking-space.jpg --model outp
 python -m unittest discover -s python/tests -v
 ```
 
-Camera/video windows stop on Q, Escape, or window close. Cameras are opened only by an explicit command. A missing or empty video source produces a useful error, and camera/writer resources are released even on failure. Use a new output directory for each prediction run. Models and datasets are intentionally absent from this package.
+Camera/video windows stop on Q, Escape, or window close. Cameras are opened only by an explicit command. A missing or empty video source produces a useful error, and camera/writer resources are released even on failure. Use a new output directory for each prediction run. Original training checkpoints and full datasets remain external; verified browser exports are included.
 
 YOLO's path sanitizer removes apostrophes from checkpoint paths. `visionlab.models` preserves verified local paths while loading and during final training validation, restoring the original downloader afterward. Archives on a drive named `Zach's SSD` work without renaming the drive or copying checkpoints. The adapter does not modify installed library files. Loading existing `.pt` or `.joblib` models assumes they are your own trusted artifacts.
 
@@ -50,9 +50,9 @@ The app was built with code signing disabled for local verification. Camera perm
 
 ## Browser workbench
 
-The React UI, Web Worker, and pure algorithms live in `web/` in this repository and are imported by the portfolio as a commit-pinned package. It supports color tracking, Sobel edges, thresholding, integral-image box blur, manually selected pixelation, and a colored-marker overlay. Images are bounded to 768 × 512; camera processing is bounded to 640 × 480 at up to 10 fps. No image or camera frame is uploaded. Camera tracks and the worker are released on navigation.
+The React UI, Web Worker, and pure algorithms live in `web/` in this repository and are imported by the portfolio as a commit-pinned package. It supports color tracking, Sobel edges, thresholding, integral-image box blur, manual and automatic face pixelation, a colored-marker overlay, rectangle tracking, and four trained models. Images are bounded to 768 × 512; camera processing is bounded to 640 × 480 at up to 10 fps. No image or camera frame is uploaded. Camera tracks and the worker are released on navigation.
 
-Python and browser algorithms are intentionally identified: Python edge detection uses Canny; browser edges expose Sobel magnitude. Python has automatic frontal-face detection; browser redaction uses user-selected regions. The browser marker overlay follows hue regions in 2D and does not infer camera pose. Face detectors can miss faces and selected regions do not follow moving subjects; inspect the result before sharing it.
+Python and browser algorithms are intentionally identified: Python edge detection uses Canny; browser edges expose Sobel magnitude. Python uses a frontal-face cascade; browser redaction supports both user-selected regions and pretrained YuNet face detection. The browser marker overlay follows hue regions in 2D and does not infer camera pose. Face detectors can miss faces and selected regions do not follow moving subjects; inspect the result before sharing it.
 
 ## Validation and provenance
 
@@ -64,4 +64,4 @@ The archive includes course material from [Computer Vision Engineer's OpenCV cou
 
 Reference APIs: [OpenCV cascade detection](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html), [Ultralytics classification](https://docs.ultralytics.com/tasks/classify/), [prediction](https://docs.ultralytics.com/modes/predict/), and [training](https://docs.ultralytics.com/modes/train/).
 
-Reproduce checkpoint inference and the parking run with `python scripts/verify-archive.py --archive /path/to/computervision`. Example images show actual computed results. Datasets and model weights are not redistributed in this repository.
+Reproduce checkpoint inference and the parking run with `python scripts/verify-archive.py --archive /path/to/computervision`. Example images show actual computed results. Full datasets and original PyTorch weights remain external. Browser exports and representative inputs are included; see [browser models](BROWSER-MODELS.md) for reproduction and numeric parity checks.

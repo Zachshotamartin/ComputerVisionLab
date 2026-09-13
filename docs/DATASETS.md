@@ -1,6 +1,6 @@
 # Dataset requirements
 
-The repository contains code and small demonstration assets. Keep downloaded datasets and trained checkpoints outside Git.
+The repository contains code and small demonstration assets. Keep full downloaded datasets and original training checkpoints outside Git. Verified browser exports and representative examples are versioned with provenance in this repository.
 
 ## Image classification
 
