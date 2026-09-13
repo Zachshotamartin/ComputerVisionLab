@@ -220,26 +220,17 @@
       {
         "file": "tiger-validation-170.jpg",
         "label": "Frame 170",
-        "partition": "validation",
-        "source": "images/val/Frame_170.jpg",
-        "sha256": "7a3ce0f78483ee170e3ceecdc2a06a8f9f73baebf97a63486e9b33926b4be0a4",
-        "bytes": 241871
+        "source": "images/val/Frame_170.jpg"
       },
       {
         "file": "tiger-validation-190.jpg",
         "label": "Frame 190",
-        "partition": "validation",
-        "source": "images/val/Frame_190.jpg",
-        "sha256": "16fbe82758bc8d6f5317bb14e48d4e5db111f2227b9bf43aec1284ebd8838cfe",
-        "bytes": 227865
+        "source": "images/val/Frame_190.jpg"
       },
       {
         "file": "tiger-validation-210.jpg",
         "label": "Frame 210",
-        "partition": "validation",
-        "source": "images/train/Frame_210.jpg",
-        "sha256": "7b6349a73919985619ab02183f16f728fa652b4987fad1cf938c1545625da06f",
-        "bytes": 197489
+        "source": "images/train/Frame_210.jpg"
       }
     ]
   }

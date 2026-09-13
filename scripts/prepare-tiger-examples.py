@@ -23,7 +23,7 @@ for frame in [170, 190, 210]:
     shutil.copyfile(source, ROOT / 'web/assets/model-examples' / filename)
     examples.append({'file': filename, 'label': f'Frame {frame}', 'partition': 'validation',
                      'source': record['path'], 'sha256': digest, 'bytes': source.stat().st_size})
-manifest['examples']['tiger'] = examples
+manifest['examples']['tiger'] = [{key: item[key] for key in ['file', 'label', 'source']} for item in examples]
 manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
 provenance = {'dataset': source_manifest['source'], 'source_video': source_manifest['source_video'],
               'split_manifest_sha256': hashlib.sha256((split / 'split-manifest.json').read_bytes()).hexdigest(),
