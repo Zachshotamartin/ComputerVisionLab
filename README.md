@@ -53,7 +53,7 @@ vision-lab track --source 0 --color '#ff0000'
 vision-lab redact --source /path/to/photo.jpg --output output/redacted.png
 vision-lab train --task classify --data /path/to/weather/data --dry-run
 vision-lab predict --model /path/to/best.pt --source /path/to/photo.jpg --imgsz 64 --output output/prediction-1
-vision-lab parking --data /path/to/parking/data --limit 300 --model output/parking.joblib
+vision-lab parking --data /path/to/parking/data --split sequence --model output/parking.joblib
 python -m unittest discover -s python/tests -v
 ```
 
@@ -83,12 +83,16 @@ docs/verification/   actual prediction and training records
 scripts/             reproducible archive checks
 ```
 
-Read [what changed](docs/REPAIRS.md), [dataset requirements](docs/DATASETS.md), and [validation and remaining limitations](docs/VALIDATION.md). The animal-pose archive has no image/keypoint annotations, so training correctly stops before loading a model. The OCT experiment has no clinical validation and needs a separate validation split. No model-accuracy improvement over the old checkpoints is claimed.
+Read [what changed](docs/REPAIRS.md), [dataset requirements](docs/DATASETS.md), and [validation and remaining limitations](docs/VALIDATION.md). The original animal-pose archive has no image/keypoint annotations; the separate tiger prototype uses a documented public dataset. OCT now uses a patient-separated training/evaluation split and has no clinical validation. See the evaluation report for measured results and comparison limits.
 
 These are course-derived explorations with new repair work and a browser implementation. [Upstream attribution](NOTICE.md) is retained. Full datasets, original PyTorch checkpoints, virtual environments, and historical training runs remain outside this repository. The browser-ready model exports, runtime, and representative inputs are included with provenance and licenses.
 
 Reproduce previews with `python scripts/verify-archive.py --archive /path/to/computervision`, followed by `python scripts/build-assets.py --archive /path/to/computervision`.
 
-## Interactive saved models
+## Interactive models
 
-Open **Trained models** for Weather, Parking, Retinal OCT, and Alpacas. Upload an image or select an example, run the original saved model locally, and export its output. Image tools add **Detect faces** under Region redaction and **Rectangle tracking** for uploaded images or an explicitly started camera. See [browser inference, reproduction, validation, and limits](docs/BROWSER-MODELS.md).
+Open **Trained models** for Weather, Parking, Retinal OCT, Alpacas, and Tiger pose. Upload an image or select an available example, run the selected model locally, and export its output. Tiger pose requires an upload; source-video frames are not redistributed. Image tools add **Detect faces** under Region redaction and **Rectangle tracking** for uploaded images or an explicitly started camera. See [browser inference, reproduction, validation, and limits](docs/BROWSER-MODELS.md).
+
+## Evaluated retraining
+
+[Evaluation and failure cases](docs/EVALUATION.md) document duplicate and patient overlap in the archive, grouped candidate training, held-out metrics, and the separate tiger-pose prototype. The parking CLI now defaults to sequence-separated training; `--split random` explicitly requests the legacy internal image split. Python redaction accepts `--face-model` and `--face-threshold` to use the same YuNet detector as the browser.

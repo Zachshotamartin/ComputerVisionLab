@@ -1,0 +1,2888 @@
+{
+  "weather": {
+    "images": 1124,
+    "counts": {
+      "train/cloudy": 243,
+      "train/rain": 181,
+      "train/shine": 189,
+      "train/sunrise": 296,
+      "val/cloudy": 57,
+      "val/rain": 34,
+      "val/shine": 64,
+      "val/sunrise": 60
+    },
+    "duplicate_clusters": 24,
+    "cross_split_duplicate_clusters": 10,
+    "cross_split_duplicate_examples": [
+      [
+        {
+          "path": "train/cloudy/cloudy110.jpg",
+          "split": "train",
+          "label": "cloudy",
+          "sha256": "a9f8a6078d665f34394cb6190b1d583c27275a17e4593a520eab954b8dfbd1fc",
+          "size": [
+            284,
+            177
+          ],
+          "pixels": "a6c0d1cf4bc3ec3b34458e6fa06de8ab77705809a3fec8a3b36137ba8590392c",
+          "dhash": "d6d0c4e4f0d2e676"
+        },
+        {
+          "path": "val/cloudy/cloudy24.jpg",
+          "split": "val",
+          "label": "cloudy",
+          "sha256": "a9f8a6078d665f34394cb6190b1d583c27275a17e4593a520eab954b8dfbd1fc",
+          "size": [
+            284,
+            177
+          ],
+          "pixels": "a6c0d1cf4bc3ec3b34458e6fa06de8ab77705809a3fec8a3b36137ba8590392c",
+          "dhash": "d6d0c4e4f0d2e676"
+        }
+      ],
+      [
+        {
+          "path": "train/cloudy/cloudy115.jpg",
+          "split": "train",
+          "label": "cloudy",
+          "sha256": "fad0bd840566ddad235752e0232e414ab4fc32845994de861485bf305c629450",
+          "size": [
+            326,
+            155
+          ],
+          "pixels": "7df77ea04fd43a4f4e3ddf6fbbd86e2552093c2cceed1b0eba264e53820992ff",
+          "dhash": "f8ccc0d8bcdbd8f8"
+        },
+        {
+          "path": "val/cloudy/cloudy3.jpg",
+          "split": "val",
+          "label": "cloudy",
+          "sha256": "fad0bd840566ddad235752e0232e414ab4fc32845994de861485bf305c629450",
+          "size": [
+            326,
+            155
+          ],
+          "pixels": "7df77ea04fd43a4f4e3ddf6fbbd86e2552093c2cceed1b0eba264e53820992ff",
+          "dhash": "f8ccc0d8bcdbd8f8"
+        }
+      ],
+      [
+        {
+          "path": "train/cloudy/cloudy158.jpg",
+          "split": "train",
+          "label": "cloudy",
+          "sha256": "88363273f4e20da536d895b708b0629de22c43e31fcadff2a6ffcf767a7cb875",
+          "size": [
+            468,
+            351
+          ],
+          "pixels": "d1ffba306336583ea31dfb9a9fada636f109841cc94b9f8641f1e22038613738",
+          "dhash": "80e0f878f8f86c0e"
+        },
+        {
+          "path": "val/cloudy/cloudy33.jpg",
+          "split": "val",
+          "label": "cloudy",
+          "sha256": "88363273f4e20da536d895b708b0629de22c43e31fcadff2a6ffcf767a7cb875",
+          "size": [
+            468,
+            351
+          ],
+          "pixels": "d1ffba306336583ea31dfb9a9fada636f109841cc94b9f8641f1e22038613738",
+          "dhash": "80e0f878f8f86c0e"
+        }
+      ],
+      [
+        {
+          "path": "train/rain/rain136.jpg",
+          "split": "train",
+          "label": "rain",
+          "sha256": "2aa51edc425a76912b3bea9291fd48bdfdafdb1276a56c90210eecd95f0d55a3",
+          "size": [
+            590,
+            329
+          ],
+          "pixels": "e9c2647c1b5dacf4b85002f3767b284382ea18873dfd5ec43136c283119335ba",
+          "dhash": "00b0bfaffdfdfcee"
+        },
+        {
+          "path": "val/rain/rain26.jpg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "2aa51edc425a76912b3bea9291fd48bdfdafdb1276a56c90210eecd95f0d55a3",
+          "size": [
+            590,
+            329
+          ],
+          "pixels": "e9c2647c1b5dacf4b85002f3767b284382ea18873dfd5ec43136c283119335ba",
+          "dhash": "00b0bfaffdfdfcee"
+        }
+      ],
+      [
+        {
+          "path": "train/rain/rain142.jpg",
+          "split": "train",
+          "label": "rain",
+          "sha256": "1411820a9206d2a7c2b785f2d72228cfb1a936a8297cb021432d5337f764de1c",
+          "size": [
+            640,
+            420
+          ],
+          "pixels": "4934ab0e64939516c2f9cc9935c3bef31a5a7eb923188046f32574ab624e6da1",
+          "dhash": "cfebe3f1f67663f2"
+        },
+        {
+          "path": "val/rain/rain24.jpeg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "1411820a9206d2a7c2b785f2d72228cfb1a936a8297cb021432d5337f764de1c",
+          "size": [
+            640,
+            420
+          ],
+          "pixels": "4934ab0e64939516c2f9cc9935c3bef31a5a7eb923188046f32574ab624e6da1",
+          "dhash": "cfebe3f1f67663f2"
+        }
+      ],
+      [
+        {
+          "path": "train/rain/rain73.jpg",
+          "split": "train",
+          "label": "rain",
+          "sha256": "8b20a138fa543cc5988ee60749e9c1154f83479dbf3549bd502dab02f89ad2ce",
+          "size": [
+            360,
+            270
+          ],
+          "pixels": "9b062bbf24218e2a61a4aca703530825b0cb2009add90526d935588d0cc7ffa3",
+          "dhash": "1b3cc82e2d118763"
+        },
+        {
+          "path": "val/rain/rain1.jpg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "8b20a138fa543cc5988ee60749e9c1154f83479dbf3549bd502dab02f89ad2ce",
+          "size": [
+            360,
+            270
+          ],
+          "pixels": "9b062bbf24218e2a61a4aca703530825b0cb2009add90526d935588d0cc7ffa3",
+          "dhash": "1b3cc82e2d118763"
+        }
+      ],
+      [
+        {
+          "path": "train/rain/rain74.jpg",
+          "split": "train",
+          "label": "rain",
+          "sha256": "836fbdd2f132414015248eaf16acbb5a6a28c66166c43a4dd63c6d13b0ca1ad9",
+          "size": [
+            250,
+            225
+          ],
+          "pixels": "4dd50a100161439ca6bd4bd7f4935303994ff5de704bac3e4da2b77411afe4e6",
+          "dhash": "00003038b8fcfc7c"
+        },
+        {
+          "path": "val/rain/rain2.jpg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "836fbdd2f132414015248eaf16acbb5a6a28c66166c43a4dd63c6d13b0ca1ad9",
+          "size": [
+            250,
+            225
+          ],
+          "pixels": "4dd50a100161439ca6bd4bd7f4935303994ff5de704bac3e4da2b77411afe4e6",
+          "dhash": "00003038b8fcfc7c"
+        }
+      ],
+      [
+        {
+          "path": "train/rain/rain96.jpg",
+          "split": "train",
+          "label": "rain",
+          "sha256": "404acffd69533efc9e334cc322e34bfce353fb73dce52a42442810647a3419e7",
+          "size": [
+            700,
+            415
+          ],
+          "pixels": "aec2b9e472aa755b87da66553df6316ee89a33004d9ac9b8d6dbf15f4ea4c0dc",
+          "dhash": "c8c8989c90901c20"
+        },
+        {
+          "path": "val/rain/rain28.jpg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "404acffd69533efc9e334cc322e34bfce353fb73dce52a42442810647a3419e7",
+          "size": [
+            700,
+            415
+          ],
+          "pixels": "aec2b9e472aa755b87da66553df6316ee89a33004d9ac9b8d6dbf15f4ea4c0dc",
+          "dhash": "c8c8989c90901c20"
+        },
+        {
+          "path": "val/rain/rain29.jpg",
+          "split": "val",
+          "label": "rain",
+          "sha256": "404acffd69533efc9e334cc322e34bfce353fb73dce52a42442810647a3419e7",
+          "size": [
+            700,
+            415
+          ],
+          "pixels": "aec2b9e472aa755b87da66553df6316ee89a33004d9ac9b8d6dbf15f4ea4c0dc",
+          "dhash": "c8c8989c90901c20"
+        }
+      ],
+      [
+        {
+          "path": "train/shine/shine115.jpg",
+          "split": "train",
+          "label": "shine",
+          "sha256": "5bc2ed5240c30db558fe452281813f1c89b156f5f7146909f1c42e139a76a780",
+          "size": [
+            852,
+            480
+          ],
+          "pixels": "9db7f8beb1b48882b28e283a8db782529091be1b871d30fadc29dc5c9879b5fd",
+          "dhash": "f8f8f8f0e670f8cc"
+        },
+        {
+          "path": "val/shine/shine25.jpg",
+          "split": "val",
+          "label": "shine",
+          "sha256": "5bc2ed5240c30db558fe452281813f1c89b156f5f7146909f1c42e139a76a780",
+          "size": [
+            852,
+            480
+          ],
+          "pixels": "9db7f8beb1b48882b28e283a8db782529091be1b871d30fadc29dc5c9879b5fd",
+          "dhash": "f8f8f8f0e670f8cc"
+        }
+      ],
+      [
+        {
+          "path": "train/shine/shine98.jpg",
+          "split": "train",
+          "label": "shine",
+          "sha256": "81cedbeb6b5b902c4a8e96222ee4ebbe5eeb89c03b03577e1a08465ff33794ec",
+          "size": [
+            900,
+            596
+          ],
+          "pixels": "3cf5e09663dbff429aafe6b6fd8b47aef813e430eac6b49c477c5ad7375f2d65",
+          "dhash": "f0f0f0e0f0f0f0f2"
+        },
+        {
+          "path": "val/shine/shine49.jpg",
+          "split": "val",
+          "label": "shine",
+          "sha256": "81cedbeb6b5b902c4a8e96222ee4ebbe5eeb89c03b03577e1a08465ff33794ec",
+          "size": [
+            900,
+            596
+          ],
+          "pixels": "3cf5e09663dbff429aafe6b6fd8b47aef813e430eac6b49c477c5ad7375f2d65",
+          "dhash": "f0f0f0e0f0f0f0f2"
+        }
+      ]
+    ],
+    "groups": 0,
+    "cross_split_groups": 0,
+    "unreadable": [],
+    "cross_split_near_duplicate_candidates": [
+      {
+        "a": "train/cloudy/cloudy110.jpg",
+        "b": "val/cloudy/cloudy24.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy115.jpg",
+        "b": "val/cloudy/cloudy3.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy158.jpg",
+        "b": "val/cloudy/cloudy33.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy179.jpg",
+        "b": "val/cloudy/cloudy13.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/cloudy/cloudy196.jpg",
+        "b": "val/cloudy/cloudy35.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy218.jpg",
+        "b": "val/cloudy/cloudy55.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy226.jpg",
+        "b": "val/cloudy/cloudy30.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/cloudy/cloudy226.jpg",
+        "b": "val/cloudy/cloudy34.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/cloudy/cloudy242.jpg",
+        "b": "val/cloudy/cloudy4.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy244.jpg",
+        "b": "val/cloudy/cloudy12.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy250.jpg",
+        "b": "val/cloudy/cloudy11.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/cloudy/cloudy266.jpg",
+        "b": "val/cloudy/cloudy9.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/cloudy/cloudy269.jpg",
+        "b": "val/cloudy/cloudy33.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/cloudy/cloudy76.jpg",
+        "b": "val/cloudy/cloudy40.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/cloudy/cloudy89.jpg",
+        "b": "val/cloudy/cloudy17.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain101.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain127.jpg",
+        "b": "val/rain/rain19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain136.jpg",
+        "b": "val/rain/rain26.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain140.jpg",
+        "b": "val/rain/rain27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain142.jpg",
+        "b": "val/rain/rain24.jpeg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain145.jpg",
+        "b": "val/rain/rain32.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain147.jpg",
+        "b": "val/rain/rain28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/rain/rain147.jpg",
+        "b": "val/rain/rain29.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/rain/rain150.jpg",
+        "b": "val/rain/rain30.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain152.jpg",
+        "b": "val/rain/rain27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain48.jpg",
+        "b": "val/rain/rain6.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain67.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/rain/rain68.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/rain/rain73.jpg",
+        "b": "val/rain/rain1.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain74.jpg",
+        "b": "val/rain/rain2.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain75.jpg",
+        "b": "val/rain/rain4.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain76.jpg",
+        "b": "val/rain/rain7.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain83.jpg",
+        "b": "val/rain/rain2.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain88.jpg",
+        "b": "val/rain/rain5.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain89.jpg",
+        "b": "val/rain/rain3.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/rain/rain96.jpg",
+        "b": "val/rain/rain28.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/rain/rain96.jpg",
+        "b": "val/rain/rain29.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine113.jpg",
+        "b": "val/shine/shine12.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine113.jpg",
+        "b": "val/shine/shine21.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine113.jpg",
+        "b": "val/shine/shine35.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine113.jpg",
+        "b": "val/shine/shine36.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine114.jpg",
+        "b": "val/shine/shine20.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine114.jpg",
+        "b": "val/shine/shine9.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine115.jpg",
+        "b": "val/shine/shine25.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine125.jpg",
+        "b": "val/shine/shine4.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine133.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine134.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine164.jpg",
+        "b": "val/sunrise/sunrise53.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine175.jpg",
+        "b": "val/shine/shine52.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine193.jpg",
+        "b": "val/shine/shine52.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine232.jpg",
+        "b": "val/shine/shine52.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine247.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine253.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine253.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine253.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine253.jpg",
+        "b": "val/sunrise/sunrise5.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine253.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine86.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine94.jpg",
+        "b": "val/shine/shine16.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine96.jpg",
+        "b": "val/shine/shine3.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine98.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/shine/shine99.jpg",
+        "b": "val/sunrise/sunrise17.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise100.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise114.jpg",
+        "b": "val/shine/shine6.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise130.jpg",
+        "b": "val/sunrise/sunrise17.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise135.jpg",
+        "b": "val/sunrise/sunrise2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise135.jpg",
+        "b": "val/sunrise/sunrise40.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise136.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise137.jpg",
+        "b": "val/shine/shine12.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise137.jpg",
+        "b": "val/shine/shine21.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise137.jpg",
+        "b": "val/shine/shine35.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise137.jpg",
+        "b": "val/shine/shine36.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise21.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise139.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise140.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise140.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise140.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise140.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise142.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise142.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise142.jpg",
+        "b": "val/sunrise/sunrise30.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise142.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise142.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise150.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise158.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise158.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise158.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise158.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise163.jpg",
+        "b": "val/sunrise/sunrise17.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise163.jpg",
+        "b": "val/sunrise/sunrise53.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise170.jpg",
+        "b": "val/sunrise/sunrise17.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise172.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise172.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise172.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise172.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise183.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise191.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise192.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise193.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise197.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise197.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise197.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise197.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise199.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise202.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise202.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise202.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise207.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise214.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise226.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise229.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise232.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise238.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise238.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise238.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise244.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise244.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise249.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise255.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise258.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise258.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise258.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise261.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise261.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise265.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise265.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise265.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise265.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise274.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise275.jpg",
+        "b": "val/sunrise/sunrise2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise286.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise291.jpg",
+        "b": "val/shine/shine48.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise295.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise295.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise295.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise295.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise297.jpg",
+        "b": "val/cloudy/cloudy54.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise298.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/shine/shine39.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise301.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise310.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise315.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise317.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise317.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise317.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise317.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise317.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise320.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise320.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise320.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise320.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise320.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise322.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise323.jpg",
+        "b": "val/sunrise/sunrise58.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise324.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise324.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise21.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise330.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise331.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise335.jpg",
+        "b": "val/sunrise/sunrise40.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise339.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise344.jpg",
+        "b": "val/sunrise/sunrise58.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/cloudy/cloudy54.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/shine/shine10.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise348.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise356.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise64.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise67.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise69.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise72.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise72.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise72.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise72.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise75.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise76.jpg",
+        "b": "val/sunrise/sunrise2.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise76.jpg",
+        "b": "val/sunrise/sunrise40.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise79.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise81.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise82.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise86.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise86.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise86.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise86.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise86.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/shine/shine2.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/shine/shine49.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise1.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise14.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise18.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise19.jpg",
+        "distance": 2
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise27.jpg",
+        "distance": 0
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise28.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise29.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise3.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise31.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise32.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise33.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise55.jpg",
+        "distance": 1
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise59.jpg",
+        "distance": 4
+      },
+      {
+        "a": "train/sunrise/sunrise96.jpg",
+        "b": "val/sunrise/sunrise60.jpg",
+        "distance": 3
+      },
+      {
+        "a": "train/sunrise/sunrise97.jpg",
+        "b": "val/sunrise/sunrise2.jpg",
+        "distance": 3
+      }
+    ]
+  },
+  "parking": {
+    "images": 6090,
+    "counts": {
+      "unsplit/empty": 3045,
+      "unsplit/not_empty": 3045
+    },
+    "duplicate_clusters": 0,
+    "cross_split_duplicate_clusters": 0,
+    "cross_split_duplicate_examples": [],
+    "groups": 140,
+    "cross_split_groups": 0,
+    "unreadable": [],
+    "group_note": "Filename prefix only; camera/site identities are absent. Grouping does not establish unseen-camera generalization."
+  },
+  "oct": {
+    "images": 84113,
+    "counts": {
+      "test/CNV": 250,
+      "test/DME": 250,
+      "test/DRUSEN": 250,
+      "test/NORMAL": 250,
+      "train/CNV": 37078,
+      "train/DME": 11328,
+      "train/DRUSEN": 8570,
+      "train/NORMAL": 26137
+    },
+    "duplicate_clusters": 6779,
+    "cross_split_duplicate_clusters": 595,
+    "cross_split_duplicate_examples": [
+      [
+        {
+          "path": "test/CNV/CNV-1016042-1.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "c0a959cb3cfdc8ef5bd8b959b7cb356024cc1551b8d431bfb9f831f2b4aee371",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-22.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "c0a959cb3cfdc8ef5bd8b959b7cb356024cc1551b8d431bfb9f831f2b4aee371",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-23.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "c0a959cb3cfdc8ef5bd8b959b7cb356024cc1551b8d431bfb9f831f2b4aee371",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-24.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "c0a959cb3cfdc8ef5bd8b959b7cb356024cc1551b8d431bfb9f831f2b4aee371",
+          "group": "1016042"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-1016042-2.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "a0679cbb07acfbbf5f4582647b5ce7445857d63847d52ced4c1dbdeb9f1b0c85",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-107.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "a0679cbb07acfbbf5f4582647b5ce7445857d63847d52ced4c1dbdeb9f1b0c85",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-108.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "a0679cbb07acfbbf5f4582647b5ce7445857d63847d52ced4c1dbdeb9f1b0c85",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-109.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "a0679cbb07acfbbf5f4582647b5ce7445857d63847d52ced4c1dbdeb9f1b0c85",
+          "group": "1016042"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-1016042-3.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "ae38b48f858544295a545b7d4aac079dd78ef4bc5d9372817695e38980f73845",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-195.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "ae38b48f858544295a545b7d4aac079dd78ef4bc5d9372817695e38980f73845",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-196.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "ae38b48f858544295a545b7d4aac079dd78ef4bc5d9372817695e38980f73845",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-197.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "ae38b48f858544295a545b7d4aac079dd78ef4bc5d9372817695e38980f73845",
+          "group": "1016042"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-1016042-4.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "724018ea32d61b17037520866c9447ee06c8747f881986faea7e7f1edb29e13a",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-210.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "724018ea32d61b17037520866c9447ee06c8747f881986faea7e7f1edb29e13a",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-211.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "724018ea32d61b17037520866c9447ee06c8747f881986faea7e7f1edb29e13a",
+          "group": "1016042"
+        },
+        {
+          "path": "train/CNV/CNV-1016042-212.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "724018ea32d61b17037520866c9447ee06c8747f881986faea7e7f1edb29e13a",
+          "group": "1016042"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-1.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "f48736c4502b451cc27f59484e8d744bcb9b01a24c8e34179c60782c243fa02d",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-5.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "f48736c4502b451cc27f59484e8d744bcb9b01a24c8e34179c60782c243fa02d",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-6.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "f48736c4502b451cc27f59484e8d744bcb9b01a24c8e34179c60782c243fa02d",
+          "group": "103044"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-10.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "3f56bcb236366d59eaceb47a916ce7914c5aa728c770242fa5e2a1cdf1589ef7",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-168.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "3f56bcb236366d59eaceb47a916ce7914c5aa728c770242fa5e2a1cdf1589ef7",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-169.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "3f56bcb236366d59eaceb47a916ce7914c5aa728c770242fa5e2a1cdf1589ef7",
+          "group": "103044"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-11.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "47d9d132f848888a2e551a570f05cfd577aafb9cf37d12c2127f2fa2d18e9329",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-188.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "47d9d132f848888a2e551a570f05cfd577aafb9cf37d12c2127f2fa2d18e9329",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-189.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "47d9d132f848888a2e551a570f05cfd577aafb9cf37d12c2127f2fa2d18e9329",
+          "group": "103044"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-12.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "b91cf967113a80b1e7417ea3d1f85ef05aa7d7fea6e83ea42d31665236d369cf",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-194.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "b91cf967113a80b1e7417ea3d1f85ef05aa7d7fea6e83ea42d31665236d369cf",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-195.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "b91cf967113a80b1e7417ea3d1f85ef05aa7d7fea6e83ea42d31665236d369cf",
+          "group": "103044"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-2.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "35de0df3d8a4bd320c41ccba8640d5efbdca3fc085cd9788c59e43c7e298cf45",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-7.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "35de0df3d8a4bd320c41ccba8640d5efbdca3fc085cd9788c59e43c7e298cf45",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-8.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "35de0df3d8a4bd320c41ccba8640d5efbdca3fc085cd9788c59e43c7e298cf45",
+          "group": "103044"
+        }
+      ],
+      [
+        {
+          "path": "test/CNV/CNV-103044-3.jpeg",
+          "split": "test",
+          "label": "CNV",
+          "sha256": "04855b524d7f1a24c93b27f9130fe2e73cdb9118b591dcdfa401b0df9d096c5b",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-26.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "04855b524d7f1a24c93b27f9130fe2e73cdb9118b591dcdfa401b0df9d096c5b",
+          "group": "103044"
+        },
+        {
+          "path": "train/CNV/CNV-103044-27.jpeg",
+          "split": "train",
+          "label": "CNV",
+          "sha256": "04855b524d7f1a24c93b27f9130fe2e73cdb9118b591dcdfa401b0df9d096c5b",
+          "group": "103044"
+        }
+      ]
+    ],
+    "groups": 4653,
+    "cross_split_groups": 566,
+    "unreadable": []
+  },
+  "alpaca": {
+    "images": 551,
+    "counts": {
+      "test/alpaca": 72,
+      "train/alpaca": 452,
+      "val/alpaca": 27
+    },
+    "duplicate_clusters": 0,
+    "cross_split_duplicate_clusters": 0,
+    "cross_split_duplicate_examples": [],
+    "groups": 0,
+    "cross_split_groups": 0,
+    "unreadable": [],
+    "cross_split_near_duplicate_candidates": []
+  },
+  "animal_pose": {
+    "annotated_images": 0,
+    "checkpoint": null,
+    "note": "Archive contains attributes and precomputed classification features, not 39-keypoint annotations."
+  }
+}

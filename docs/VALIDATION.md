@@ -1,4 +1,4 @@
-# Validation
+# Initial restoration validation
 
 Verified locally on 2026-09-12:
 
@@ -12,8 +12,12 @@ Verified locally on 2026-09-12:
 
 ## Remaining prerequisites and limits
 
-Animal-pose training needs annotated images. OCT training needs a separate validation split and has no clinical validation. The OpenCV frontal-face cascade can miss faces. Browser redaction supports manual regions and automatic YuNet face detection on processed frames; detection can miss faces. Color tracking and the marker overlay identify hue regions, not semantic objects or 3D pose. The archived checkpoints were smoke-tested, not independently benchmarked for generalization.
+The original 39-keypoint project needs annotated images. Subsequent OCT training now uses a patient-separated split and has no clinical validation. The OpenCV frontal-face cascade can miss faces. Browser redaction supports manual regions and automatic YuNet face detection on processed frames; detection can miss faces. Color tracking and the marker overlay identify hue regions, not semantic objects or 3D pose. The archived checkpoints were smoke-tested, not independently benchmarked for generalization.
 
 Historical training records are documented in `REPAIRS.md` and are not displayed as new results or accuracy improvements.
 
 Browser model integration: see [numeric conversion evidence](verification/browser-export.json) and [the browser validation workflow](BROWSER-MODELS.md).
+
+## Evaluation follow-up
+
+See [the current evaluation report](EVALUATION.md) for retrained checkpoints and independent held-out scores. Current regression suites add sequence-group boundaries, optional Python YuNet, dim rectangle detection, binary SVM integrity, and pose coordinate decoding. Browser checks exercise the actual shipped models, uploads, exports, sensitivity switching, cancellation, camera cleanup, and mobile layout. Native compilation and offline synthetic fixtures do not exercise physical-camera permissions.

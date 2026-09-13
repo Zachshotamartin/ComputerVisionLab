@@ -32,7 +32,7 @@ function drawOverlay(context, boxes, mode) {
 export default function VisionLab({ assetBase = '/assets/computer-vision/' }) {
   const root=useRef(null);
   const [picking,setPicking]=useState(false),[preview,setPreview]=useState('compare');
-  const [automatic,setAutomatic]=useState(false),[progress,setProgress]=useState('');
+  const [automatic,setAutomatic]=useState(false),[faceThreshold,setFaceThreshold]=useState(.65),[progress,setProgress]=useState('');
   const inputs = samples.map(sample => ({ ...sample, src: `${assetBase.replace(/\/?$/, '/')}${sample.src}` }));
   const [mode, setMode] = useState('color'), [amount, setAmount] = useState(100), [color, setColor] = useState(samples[0].color);
   const [tolerance, setTolerance] = useState(24), [regions, setRegions] = useState([]), [source, setSource] = useState(inputs[0]);
@@ -92,11 +92,11 @@ export default function VisionLab({ assetBase = '/assets/computer-vision/' }) {
   }, []);
 
   useEffect(() => {
-    const options = { mode, amount, color, tolerance, regions, automatic, assetBase, minArea: 50 };
+    const options = { mode, amount, color, tolerance, regions, automatic, faceThreshold, assetBase, minArea: 50 };
     setLoading(true);setProgress('');
     currentOptions.current = options;
     submit(lastImage.current || pixels, options);
-  }, [mode, amount, color, tolerance, regions, automatic, assetBase, pixels, submit]);
+  }, [mode, amount, color, tolerance, regions, automatic, faceThreshold, assetBase, pixels, submit]);
 
   useEffect(() => {
     let canceled = false;
@@ -202,8 +202,8 @@ export default function VisionLab({ assetBase = '/assets/computer-vision/' }) {
       <aside className="vision-controls">
         <div className="lab-switcher vision-operation-switcher" role="group" aria-label="Vision operation">{visionModes.map(item=><button type="button" key={item.id} aria-pressed={mode===item.id} onClick={()=>{setMode(item.id);setPicking(false);setError('');}}>{item.label}</button>)}</div>
         <p>{selected.description}</p>{mode==="overlay"&&<button type="button" className="lab-text-button" onClick={()=>chooseSource(inputs[1])}>Try the marker example</button>}
-        {tracking ? <><ColorPicker value={color} onChange={setColor} picking={picking} onPick={()=>{setPicking(!picking);setPreview("input");}} /><label>Color tolerance <output>{tolerance}°</output><input aria-label="Color tolerance" type="range" min="2" max="90" value={tolerance} onChange={event => setTolerance(Number(event.target.value))} /></label></> : <label>{mode === 'redact' ? 'Pixel size' : mode === 'blur' ? 'Blur strength' : 'Threshold'} <output>{amount}</output><input aria-label={mode === 'redact' ? 'Pixel size' : mode === 'blur' ? 'Blur strength' : 'Threshold'} type="range" min="1" max="255" value={amount} onChange={event => setAmount(Number(event.target.value))} /></label>}
-        {mode==='redact'&&<><div className="lab-switcher" role="group" aria-label="Redaction selection"><button type="button" aria-pressed={!automatic} onClick={()=>setAutomatic(false)}>Manual regions</button><button type="button" aria-pressed={automatic} onClick={()=>setAutomatic(true)}>Detect faces</button></div>{automatic&&<><p>Pretrained YuNet finds faces, then pixelates padded regions. Check the result; a face can be missed.</p><button type="button" onClick={()=>chooseSource({id:'face',title:'Face detection example',src:assetBase+'model-examples/face.png'})}>Try face example</button></>}</>}
+        {tracking ? <><ColorPicker value={color} onChange={setColor} picking={picking} onPick={()=>{setPicking(!picking);setPreview("input");}} /><label>Color tolerance <output>{tolerance}°</output><input aria-label="Color tolerance" type="range" min="2" max="90" value={tolerance} onChange={event => setTolerance(Number(event.target.value))} /></label></> : <label>{mode === 'redact' ? 'Pixel size' : mode === 'blur' ? 'Blur strength' : mode === 'rectangles' ? 'Edge strength' : 'Threshold'} <output>{amount}</output><input aria-label={mode === 'redact' ? 'Pixel size' : mode === 'blur' ? 'Blur strength' : mode === 'rectangles' ? 'Edge strength' : 'Threshold'} type="range" min="1" max="255" value={amount} onChange={event => setAmount(Number(event.target.value))} /></label>}
+        {mode==='redact'&&<><div className="lab-switcher" role="group" aria-label="Redaction selection"><button type="button" aria-pressed={!automatic} onClick={()=>setAutomatic(false)}>Manual regions</button><button type="button" aria-pressed={automatic} onClick={()=>setAutomatic(true)}>Detect faces</button></div>{automatic&&<><div className="lab-switcher" role="group" aria-label="Face sensitivity">{[[.85,'Strict'],[.65,'Balanced'],[.45,'Thorough']].map(([value,label])=><button type="button" key={value} aria-pressed={faceThreshold===value} onClick={()=>setFaceThreshold(value)}>{label}</button>)}</div><p>Strict reduces false detections; Thorough may find more faces but can also redact other objects.</p><p>Pretrained YuNet finds faces, then pixelates padded regions. Check the result; a face can be missed.</p><button type="button" onClick={()=>chooseSource({id:'face',title:'Face detection example',src:assetBase+'model-examples/face.png'})}>Try face example</button></>}</>}
         {mode==='rectangles'&&<button type="button" onClick={()=>chooseSource({id:'rectangles',title:'Perspective rectangles',src:assetBase+'rectangles.png'})}>Try rectangle example</button>}
         {mode === 'redact' && <div className="vision-region-actions"><button type="button" onClick={() => setRegions(previous => [...previous, { x: after.current.width * .3, y: after.current.height * .25, width: after.current.width * .4, height: after.current.height * .5 }])}>Add center region</button><button type="button" disabled={!regions.length} onClick={() => setRegions(previous => previous.slice(0, -1))}>Undo region</button><button type="button" disabled={!regions.length} onClick={() => setRegions([])}>Clear regions</button></div>}
         <div className="vision-readout"><span>{camera ? 'Live camera · up to 10 fps' : source.title}</span><strong>{metrics ? `${metrics.width} × ${metrics.height}` : 'Opening image…'}</strong>{metrics && <span>{tracking || ['redact','rectangles'].includes(mode) ? `${metrics.regions} region${metrics.regions === 1 ? '' : 's'} · ` : ''}{metrics.milliseconds.toFixed(1)} ms processing</span>}</div>

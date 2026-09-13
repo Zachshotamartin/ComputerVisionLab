@@ -12,7 +12,7 @@ The historically named `pneumonia_classifier` directory actually contains retina
 
 ## Parking
 
-The `empty/` and `not_empty/` folders contain cropped parking-space images. The training pipeline uses a seeded, stratified image split after removing duplicate feature vectors. Scaling is fitted within each cross-validation fold. This is an internal image benchmark; images from the same camera or recording may still appear on both sides. A deployment evaluation should hold out complete cameras or recordings.
+The `empty/` and `not_empty/` folders contain cropped parking-space images. The default CLI uses numeric filename-prefix sequence blocks with embargo gaps and grouped cross-validation. Scaling is fitted within each fold, and feature duplicates are removed across partitions. Use `--split random` only to reproduce the older internal image benchmark. Without camera/site metadata, even the sequence split does not establish unseen-camera performance.
 
 ## Object detection
 
@@ -29,3 +29,7 @@ Each image needs a corresponding `.txt` label file. Each row contains `class x_c
 ## Animal pose
 
 `configs/animal-pose.yaml` preserves the original 39-keypoint layout and left/right permutation. Labels need a class and box, followed by 39 `(x, y, visibility)` triples. Visibility must be 0, 1, or 2. The archive's YOLO `images/train`, `images/val`, `labels/train`, and `labels/val` directories are empty. Its AwA2 attributes and ResNet feature files do not supply the missing keypoint labels. The repaired preflight makes that prerequisite explicit; no completed animal-pose model is claimed.
+
+## Evaluated splits and separate tiger prototype
+
+See [EVALUATION.md](EVALUATION.md) for the immutable weather, patient-grouped OCT, parking, and alpaca protocols. The original 39-keypoint configuration stays available. A separate 12-keypoint tiger dataset and chronological split can be prepared with `python scripts/prepare-tiger-pose.py --download`. All frames come from one video; do not describe its later-frame test as unseen-animal generalization. Downloaded frames remain outside Git.

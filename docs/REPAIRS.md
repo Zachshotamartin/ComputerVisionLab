@@ -42,7 +42,7 @@ The repaired archive retains the old small entry-point scripts, now forwarding t
 
 ## Native application
 
-The original Xcode project is in `ar_webcam_tool/AR_webcam_tool/AR_webcam_tool.xcodeproj` in the archive. Its updated source is mirrored under `native/macos/`. Build the `AR_webcam_tool` scheme. Start the camera using the button after launch. This is 2D rectangle tracking, not depth reconstruction or world-anchored AR.
+The original Xcode project is in `ar_webcam_tool/AR_webcam_tool/AR_webcam_tool.xcodeproj` in the archive. The canonical repaired source is under `native/macos/`, including the newer straight-edge check for Vision rectangle proposals. Build the `AR_webcam_tool` scheme. Start the camera using the button after launch. This is 2D rectangle tracking, not depth reconstruction or world-anchored AR.
 
 The repository can also build the native app independently with `sh native/macos/build.sh /path/to/build`, using the macOS command-line developer tools. Open the resulting `VisionLab.app` to test the camera.
 
@@ -50,9 +50,9 @@ The app was built with code signing disabled for local verification. Camera perm
 
 ## Browser workbench
 
-The React UI, Web Worker, and pure algorithms live in `web/` in this repository and are imported by the portfolio as a commit-pinned package. It supports color tracking, Sobel edges, thresholding, integral-image box blur, manual and automatic face pixelation, a colored-marker overlay, rectangle tracking, and four trained models. Images are bounded to 768 × 512; camera processing is bounded to 640 × 480 at up to 10 fps. No image or camera frame is uploaded. Camera tracks and the worker are released on navigation.
+The React UI, Web Worker, and pure algorithms live in `web/` in this repository and are imported by the portfolio as a commit-pinned package. It supports color tracking, Sobel edges, thresholding, integral-image box blur, manual and automatic face pixelation, a colored-marker overlay, rectangle tracking, and five trained models. Images are bounded to 768 × 512; camera processing is bounded to 640 × 480 at up to 10 fps. No image or camera frame is uploaded. Camera tracks and the worker are released on navigation.
 
-Python and browser algorithms are intentionally identified: Python edge detection uses Canny; browser edges expose Sobel magnitude. Python uses a frontal-face cascade; browser redaction supports both user-selected regions and pretrained YuNet face detection. The browser marker overlay follows hue regions in 2D and does not infer camera pose. Face detectors can miss faces and selected regions do not follow moving subjects; inspect the result before sharing it.
+Python and browser algorithms are intentionally identified: Python edge detection uses Canny; browser edges expose Sobel magnitude. Python supports a frontal-face cascade or an explicitly supplied YuNet model; browser redaction supports both user-selected regions and pretrained YuNet face detection. The browser marker overlay follows hue regions in 2D and does not infer camera pose. Face detectors can miss faces and selected regions do not follow moving subjects; inspect the result before sharing it.
 
 ## Validation and provenance
 
@@ -65,3 +65,7 @@ The archive includes course material from [Computer Vision Engineer's OpenCV cou
 Reference APIs: [OpenCV cascade detection](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html), [Ultralytics classification](https://docs.ultralytics.com/tasks/classify/), [prediction](https://docs.ultralytics.com/modes/predict/), and [training](https://docs.ultralytics.com/modes/train/).
 
 Reproduce checkpoint inference and the parking run with `python scripts/verify-archive.py --archive /path/to/computervision`. Example images show actual computed results. Full datasets and original PyTorch weights remain external. Browser exports and representative inputs are included; see [browser models](BROWSER-MODELS.md) for reproduction and numeric parity checks.
+
+## Evaluation follow-up
+
+The earlier smoke checks and historical records above are retained for provenance. [EVALUATION.md](EVALUATION.md) now records duplicate/patient auditing, full parking sequence evaluation, weather/OCT/alpaca retraining, a separate tiger-pose prototype, face robustness checks, and browser/native geometry fixtures. The default parking CLI uses sequence partitions; optional YuNet improves the Python face workflow on the documented narrow fixtures. Original assets and archive files remain preserved.

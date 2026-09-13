@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-12",
+  "purpose": "Bounded model evaluation and retraining. Dataset scores do not establish broad real-world or clinical performance.",
+  "models": {
+    "weather": {
+      "metric": "accuracy",
+      "value": 0.9629629629629629,
+      "balanced_accuracy": 0.9674579376978177,
+      "samples": 189,
+      "method": "2000 seeded bootstrap resamples of whole duplicate/patient groups",
+      "groups": 171,
+      "accuracy_95_interval": [
+        0.9340645395213923,
+        0.9893062350665605
+      ],
+      "split": "Exact and conservatively grouped near-duplicate images kept separate",
+      "limit": "One small weather collection; grouping is conservative and unfamiliar photo sources remain untested.",
+      "source_checkpoint_sha256": "5348394a1b49a536147404d8efec0990b04bf80577c8c1f8f08009a417ce6f0b"
+    },
+    "oct": {
+      "metric": "accuracy",
+      "value": 0.8933333333333333,
+      "balanced_accuracy": 0.8933333333333334,
+      "samples": 1200,
+      "method": "2000 seeded bootstrap resamples of whole duplicate/patient groups",
+      "groups": 365,
+      "accuracy_95_interval": [
+        0.8630691183993634,
+        0.9187468827784191
+      ],
+      "split": "Patient IDs and exact hashes kept separate",
+      "limit": "Balanced subset of one OCT collection; no clinical validation. Legacy test was contaminated.",
+      "source_checkpoint_sha256": "6614cd6d81971e1aa5d17b0b10a3cb8b042665e43ff03498731935a2216da096"
+    },
+    "parking": {
+      "metric": "accuracy",
+      "value": 0.9992175273865415,
+      "balanced_accuracy": 0.9992063492063492,
+      "samples": 1278,
+      "groups": 26,
+      "split": "Contiguous filename-prefix blocks with gaps between partitions",
+      "limit": "Camera and site identifiers are unavailable. This is not an unseen-camera benchmark."
+    },
+    "alpaca": {
+      "metric": "box mAP50",
+      "value": 0.8612740721110085,
+      "map50_95": 0.6843401151481698,
+      "samples": 72,
+      "split": "Original held-out test images; development uses a separate grouped split",
+      "limit": "One small single-class collection; generalization and negative-image coverage remain limited.",
+      "source_checkpoint_sha256": "15033585248bbbfd5a6e82f0aa47948ac586d59dd2db16417074fca670f9583b"
+    },
+    "tiger": {
+      "metric": "pose mAP50",
+      "value": 0.9622727272727272,
+      "map50_95": 0.23711847046631532,
+      "samples": 33,
+      "split": "Later frames with temporal gaps",
+      "limit": "A new 12-keypoint tiger prototype from one video. Landmark precision is limited (see stricter mAP50\u201395); this is not the missing 39-keypoint model or a general animal model.",
+      "source_checkpoint_sha256": "e6445d46f9192307d10b74a57f2c60398d4aebc5d678aa6ef3c36119f06f4a7c"
+    }
+  }
+}

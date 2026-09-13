@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "models": {
+    "weather": {
+      "file": "weather-cc12fcf108a4.onnx",
+      "bytes": 5778068,
+      "sha256": "cc12fcf108a49c8783fa9805dafe807884ada4207ca6641a5d8ce6b0938218eb",
+      "source": "imageclassification/weather_classifier/runs/classify/train/weights/best.pt",
+      "kind": "classify",
+      "size": 64,
+      "classes": [
+        "cloudy",
+        "rain",
+        "shine",
+        "sunrise"
+      ],
+      "preprocess": "center-crop-rgb-0-1"
+    },
+    "oct": {
+      "file": "oct-b0f762e9b469.onnx",
+      "bytes": 5778066,
+      "sha256": "b0f762e9b469aae23d3260e63b52bbc9d9d421a996ed5e61ee4c218e58e5436e",
+      "source": "imageclassification/pneumonia_classifier/runs/classify/train/weights/best.pt",
+      "kind": "classify",
+      "size": 64,
+      "classes": [
+        "CNV",
+        "DME",
+        "DRUSEN",
+        "NORMAL"
+      ],
+      "preprocess": "center-crop-rgb-0-1"
+    },
+    "alpaca": {
+      "file": "alpaca-0dbbf90ad9d0.onnx",
+      "bytes": 12238751,
+      "sha256": "0dbbf90ad9d04454f038a7c563ca961c6ab51890b83ea32294f1cc9998cb4927",
+      "source": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/runs/detect/train3/weights/best.pt",
+      "kind": "detect",
+      "size": 640,
+      "classes": [
+        "alpaca"
+      ],
+      "preprocess": "letterbox-rgb-0-1"
+    },
+    "parking": {
+      "file": "parking-32ca05c04da2.json",
+      "bytes": 1244956,
+      "sha256": "32ca05c04da2797a76c742508ebdd4eb2ee5a7c2ae18541fdf2bc6617a99fc2d",
+      "source": "output/parking.joblib",
+      "kind": "svm",
+      "size": 15,
+      "classes": [
+        "empty",
+        "not_empty"
+      ],
+      "preprocess": "area-rgb-0-1"
+    },
+    "face": {
+      "file": "face-8f2383e4dd3c.onnx",
+      "bytes": 232589,
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+      "kind": "face",
+      "size": 640,
+      "classes": [
+        "face"
+      ],
+      "preprocess": "letterbox-bgr-0-255",
+      "source": "https://github.com/opencv/opencv_zoo/tree/47534e27c9851bb1128ccc0102f1145e27f23f98/models/face_detection_yunet"
+    }
+  },
+  "sources": {},
+  "examples": {
+    "weather": [
+      {
+        "file": "weather-cloudy.png",
+        "label": "cloudy",
+        "source": "imageclassification/weather_classifier/data/val/cloudy/cloudy1.jpg"
+      },
+      {
+        "file": "weather-rain.png",
+        "label": "rain",
+        "source": "imageclassification/weather_classifier/data/val/rain/rain1.jpg"
+      },
+      {
+        "file": "weather-shine.png",
+        "label": "shine",
+        "source": "imageclassification/weather_classifier/data/val/shine/shine1.jpg"
+      },
+      {
+        "file": "weather-sunrise.png",
+        "label": "sunrise",
+        "source": "imageclassification/weather_classifier/data/val/sunrise/sunrise1.jpg"
+      }
+    ],
+    "oct": [
+      {
+        "file": "oct-cnv.png",
+        "label": "CNV",
+        "source": "imageclassification/pneumonia_classifier/data/test/CNV/CNV-1016042-1.jpeg"
+      },
+      {
+        "file": "oct-dme.png",
+        "label": "DME",
+        "source": "imageclassification/pneumonia_classifier/data/test/DME/DME-1081406-1.jpeg"
+      },
+      {
+        "file": "oct-drusen.png",
+        "label": "DRUSEN",
+        "source": "imageclassification/pneumonia_classifier/data/test/DRUSEN/DRUSEN-1083159-1.jpeg"
+      },
+      {
+        "file": "oct-normal.png",
+        "label": "NORMAL",
+        "source": "imageclassification/pneumonia_classifier/data/test/NORMAL/NORMAL-1017237-1.jpeg"
+      }
+    ],
+    "parking": [
+      {
+        "file": "parking-empty.png",
+        "label": "empty",
+        "source": "imageclassification/parking_classifier/data/empty/00000000_00000161.jpg"
+      },
+      {
+        "file": "parking-not_empty.png",
+        "label": "not_empty",
+        "source": "imageclassification/parking_classifier/data/not_empty/00000000_00000003.jpg"
+      }
+    ],
+    "alpaca": [
+      {
+        "file": "alpaca.png",
+        "label": "Alpacas",
+        "source": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/data/images/test/ec522d35b7604195.jpg"
+      }
+    ]
+  }
+}

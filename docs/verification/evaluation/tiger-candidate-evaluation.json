@@ -1,0 +1,20 @@
+{
+  "task": "tiger",
+  "checkpoint_sha256": "e6445d46f9192307d10b74a57f2c60398d4aebc5d678aa6ef3c36119f06f4a7c",
+  "input_size": 320,
+  "split_manifest_sha256": "670fb8309dd07a008e34ae4294eca6cd8b451977e39829bd880a9c0abde9fe03",
+  "metrics": {
+    "metrics/precision(B)": 0.998284253571724,
+    "metrics/recall(B)": 1.0,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.8376349392542941,
+    "metrics/precision(P)": 0.968033215584702,
+    "metrics/recall(P)": 0.9696969696969697,
+    "metrics/mAP50(P)": 0.9622727272727272,
+    "metrics/mAP50-95(P)": 0.23711847046631532,
+    "fitness": 1.0747534097206095
+  },
+  "images": 33,
+  "save_dir": "ComputerVisionLab/output/evaluation/detection/tiger-candidate",
+  "scope": "Frozen held-out images; tiger frames come from one video and do not demonstrate unseen-animal generalization."
+}

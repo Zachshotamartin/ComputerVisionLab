@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/ultralytics/assets/releases/download/v0.0.0/tiger-pose.zip",
+  "archive_sha256": "834dd66fa14897d563d35d67ca7988af9c2331edaa8c8c96f47cd8847fe4a405",
+  "annotation_license": "AGPL-3.0",
+  "source_video": "https://youtu.be/Gc6K5eKrTNQ",
+  "redistribution": "Original video terms apply; no downloaded frames are shipped in the public repository.",
+  "scope": "New 12-keypoint tiger prototype; not restoration of the missing 39-keypoint quadruped model. All images are frames of the same source video, so held-out frames do not establish unseen-animal or unseen-scene performance.",
+  "grouping": "Chronological frame blocks with 19-frame embargoes",
+  "counts": {
+    "train": 151,
+    "val": 41,
+    "test": 33,
+    "embargo": 38
+  },
+  "manifest_sha256": "670fb8309dd07a008e34ae4294eca6cd8b451977e39829bd880a9c0abde9fe03"
+}

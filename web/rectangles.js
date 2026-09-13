@@ -2,11 +2,25 @@
 export function findRectangles(data,width,height,threshold=100) {
  const gray=new Float32Array(width*height),edge=new Uint8Array(width*height);
  for(let i=0;i<gray.length;i++)gray[i]=.2126*data[i*4]+.7152*data[i*4+1]+.0722*data[i*4+2];
- for(let y=1;y<height-1;y++)for(let x=1;x<width-1;x++){
-  const i=y*width+x,gx=-gray[i-width-1]+gray[i-width+1]-2*gray[i-1]+2*gray[i+1]-gray[i+width-1]+gray[i+width+1];
-  const gy=-gray[i-width-1]-2*gray[i-width]-gray[i-width+1]+gray[i+width-1]+2*gray[i+width]+gray[i+width+1];
-  if(Math.hypot(gx,gy)>threshold)edge[i]=1;
+ // Smooth sensor noise before differentiating; use image-relative edge strength
+ // so dim paper and softly focused surfaces are not rejected by a fixed cutoff.
+ const horizontal=new Float32Array(gray.length),smooth=new Float32Array(gray.length),kernel=[1,4,6,4,1];
+ for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+  let value=0;for(let k=-2;k<=2;k++)value+=gray[y*width+Math.max(0,Math.min(width-1,x+k))]*kernel[k+2];horizontal[y*width+x]=value/16;
  }
+ for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+  let value=0;for(let k=-2;k<=2;k++)value+=horizontal[Math.max(0,Math.min(height-1,y+k))*width+x]*kernel[k+2];smooth[y*width+x]=value/16;
+ }
+ const magnitudes=new Float32Array(gray.length),histogram=new Uint32Array(2048);
+ for(let y=1;y<height-1;y++)for(let x=1;x<width-1;x++){
+  const i=y*width+x,gx=-smooth[i-width-1]+smooth[i-width+1]-2*smooth[i-1]+2*smooth[i+1]-smooth[i+width-1]+smooth[i+width+1];
+  const gy=-smooth[i-width-1]-2*smooth[i-width]-smooth[i-width+1]+smooth[i+width-1]+2*smooth[i+width]+smooth[i+width+1];
+  const magnitude=Math.hypot(gx,gy);magnitudes[i]=magnitude;histogram[Math.min(2047,Math.floor(magnitude))]++;
+ }
+ let cumulative=0,strong=0;const rank=(width-2)*(height-2)*.995;
+ for(let i=0;i<histogram.length;i++){cumulative+=histogram[i];if(cumulative>=rank){strong=i;break;}}
+ const cutoff=Math.max(8,strong*.45*Math.max(.2,threshold/100));
+ for(let i=0;i<edge.length;i++)if(magnitudes[i]>cutoff)edge[i]=1;
  const cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);
  const area=points=>Math.abs(points.reduce((sum,p,i)=>{const q=points[(i+1)%points.length];return sum+p[0]*q[1]-p[1]*q[0];},0))/2;
  function hull(points){
@@ -34,7 +48,7 @@ export function findRectangles(data,width,height,threshold=100) {
   const sides=polygon.map((p,i)=>Math.hypot(p[0]-polygon[(i+1)%4][0],p[1]-polygon[(i+1)%4][1]));
   if(Math.min(...sides)<20||Math.max(...sides)/Math.min(...sides)>12)continue;
   // A curved blob's interior edge points should not count as straight sides.
-  let close=0;const tolerance=Math.max(3,Math.sqrt(originalArea)*.025);
+  let close=0;const tolerance=Math.max(5,Math.sqrt(originalArea)*.04);
   for(const p of points){let distance=Infinity;for(let i=0;i<4;i++){const a=polygon[i],b=polygon[(i+1)%4];distance=Math.min(distance,Math.abs(cross(a,b,p))/sides[i]);}if(distance<=tolerance)close++;}
   if(close/points.length<.75)continue;
   const xs=polygon.map(p=>p[0]),ys=polygon.map(p=>p[1]);

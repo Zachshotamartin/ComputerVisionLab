@@ -10,7 +10,8 @@
     "./style.css": "./web/vision.css",
     "./model-math": "./web/modelMath.js",
     "./model-engine": "./web/modelEngine.js",
-    "./models.css": "./web/models.css"
+    "./models.css": "./web/models.css",
+    "./evaluation": "./web/assets/evaluation.json"
   },
   "files": [
     "web"

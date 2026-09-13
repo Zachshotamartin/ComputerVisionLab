@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "task": "alpaca",
+  "source": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/data",
+  "grouping": "decoded pixel hashes and conservative dHash distance <=4 components",
+  "counts": {
+    "train": {
+      "alpaca": 383
+    },
+    "val": {
+      "alpaca": 96
+    },
+    "test": {
+      "alpaca": 72
+    }
+  },
+  "legacy_comparison": "Original checkpoints saw training/validation images in these regrouped sets. Their scores are descriptive only; new candidate hold-outs are independent of candidate fitting.",
+  "manifest_sha256": "3accfbe9c9d3e3b9f7be2d7fe1f50eb7bc5a83d3b08e5b0e1184aea5a5f9be97",
+  "groups": {
+    "train": 382,
+    "val": 96,
+    "test": 72
+  },
+  "excluded_count": 0
+}

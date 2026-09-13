@@ -1,0 +1,27 @@
+{
+  "task": "tiger",
+  "size": 320,
+  "epochs_requested": 40,
+  "duration_seconds": 172.130765914917,
+  "pretrained": "yolov8n-pose.pt",
+  "best_checkpoint": "ComputerVisionLab/output/evaluation/training/tiger-320/weights/best.pt",
+  "validation": {
+    "metrics/precision(B)": 0.998677927368484,
+    "metrics/recall(B)": 1.0,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.8334220030915077,
+    "metrics/precision(P)": 0.8525069156659523,
+    "metrics/recall(P)": 0.8536585365853658,
+    "metrics/mAP50(P)": 0.7408536585365852,
+    "metrics/mAP50-95(P)": 0.24991060275126387,
+    "fitness": 1.0833326058427715
+  },
+  "selection": "Best epoch by development validation only; frozen test split is not used during fitting.",
+  "runtime": {
+    "python": "3.12.5",
+    "torch": "2.14.0",
+    "ultralytics": "8.4.150",
+    "device": "mps"
+  },
+  "determinism": "Seeded splits and training; MPS reports some operations are not bitwise deterministic."
+}

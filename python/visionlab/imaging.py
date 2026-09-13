@@ -1,4 +1,5 @@
 """Image operations with explicit bounds, circular hue, and checked I/O."""
+
 from pathlib import Path
 import math
 
@@ -36,8 +37,13 @@ def hue_ranges(bgr, tolerance=10, saturation=100, brightness=60):
         spans = [(0, high), (180 + low, 179)]
     elif high > 179:
         spans = [(low, 179), (0, high - 180)]
-    return [(np.array([a, saturation, brightness], np.uint8),
-             np.array([b, 255, 255], np.uint8)) for a, b in spans]
+    return [
+        (
+            np.array([a, saturation, brightness], np.uint8),
+            np.array([b, 255, 255], np.uint8),
+        )
+        for a, b in spans
+    ]
 
 
 def color_mask(image, bgr, tolerance=10, min_area=30):
@@ -53,7 +59,7 @@ def color_mask(image, bgr, tolerance=10, min_area=30):
             objects.append(dict(x=x, y=y, width=width, height=height, area=area))
         else:
             mask[labels == index] = 0
-    return mask, sorted(objects, key=lambda item: item['area'], reverse=True)
+    return mask, sorted(objects, key=lambda item: item["area"], reverse=True)
 
 
 def clip_box(box, width, height, padding=0):
@@ -61,7 +67,10 @@ def clip_box(box, width, height, padding=0):
     if not all(math.isfinite(v) for v in box) or w <= 0 or h <= 0:
         return None
     left, top = max(0, math.floor(x - padding)), max(0, math.floor(y - padding))
-    right, bottom = min(width, math.ceil(x + w + padding)), min(height, math.ceil(y + h + padding))
+    right, bottom = (
+        min(width, math.ceil(x + w + padding)),
+        min(height, math.ceil(y + h + padding)),
+    )
     return (left, top, right, bottom) if right > left and bottom > top else None
 
 
@@ -73,38 +82,94 @@ def redact(image, boxes, block=18, padding=10):
             continue
         left, top, right, bottom = bounds
         roi = image[top:bottom, left:right]
-        small = cv2.resize(roi, (max(1, roi.shape[1] // max(1, block)), max(1, roi.shape[0] // max(1, block))), interpolation=cv2.INTER_AREA)
-        output[top:bottom, left:right] = cv2.resize(small, (right-left, bottom-top), interpolation=cv2.INTER_NEAREST)
+        small = cv2.resize(
+            roi,
+            (
+                max(1, roi.shape[1] // max(1, block)),
+                max(1, roi.shape[0] // max(1, block)),
+            ),
+            interpolation=cv2.INTER_AREA,
+        )
+        output[top:bottom, left:right] = cv2.resize(
+            small, (right - left, bottom - top), interpolation=cv2.INTER_NEAREST
+        )
     return output
 
 
-def face_detector():
-    """Load once per session; uses the cascade distributed with OpenCV."""
-    detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+class YuNetFaces:
+    """Bounded, aspect-preserving YuNet inference on BGR frames."""
+
+    def __init__(self, model, threshold=0.65):
+        path = Path(model).expanduser().resolve()
+        if not path.is_file():
+            raise ValueError(f"Face model does not exist: {path}")
+        if not math.isfinite(threshold) or not 0 < threshold < 1:
+            raise ValueError("Face threshold must be between 0 and 1")
+        self.detector = cv2.FaceDetectorYN.create(
+            str(path), "", (640, 640), threshold, 0.3, 5000
+        )
+
+    def detect(self, image):
+        height, width = image.shape[:2]
+        scale = min(640 / width, 640 / height)
+        w, h = max(1, round(width * scale)), max(1, round(height * scale))
+        left, top = (640 - w) // 2, (640 - h) // 2
+        canvas = np.full((640, 640, 3), 114, dtype=np.uint8)
+        canvas[top : top + h, left : left + w] = cv2.resize(
+            image, (w, h), interpolation=cv2.INTER_LINEAR
+        )
+        _, detections = self.detector.detect(canvas)
+        boxes = []
+        for row in [] if detections is None else detections:
+            x, y, bw, bh = map(float, row[:4])
+            bounds = clip_box(
+                ((x - left) / scale, (y - top) / scale, bw / scale, bh / scale),
+                width,
+                height,
+            )
+            if bounds:
+                x1, y1, x2, y2 = bounds
+                boxes.append((x1, y1, x2 - x1, y2 - y1))
+        return boxes
+
+
+def face_detector(model=None, threshold=0.65):
+    """Load once per session; an explicit ONNX path selects YuNet."""
+    if model is not None:
+        return YuNetFaces(model, threshold)
+    detector = cv2.CascadeClassifier(
+        cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    )
     if detector.empty():
         raise ValueError("OpenCV's frontal-face cascade could not be loaded")
     return detector
 
 
 def faces(image, detector):
+    if isinstance(detector, YuNetFaces):
+        return detector.detect(image)
     gray = cv2.equalizeHist(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY))
-    return detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(24, 24))
+    return detector.detectMultiScale(
+        gray, scaleFactor=1.1, minNeighbors=5, minSize=(24, 24)
+    )
 
 
 def effect(image, mode, amount=100):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    if mode == 'gray':
+    if mode == "gray":
         return gray
-    if mode == 'edges':
+    if mode == "edges":
         return cv2.Canny(gray, amount, min(255, amount * 2))
-    if mode == 'threshold':
+    if mode == "threshold":
         return cv2.threshold(gray, amount, 255, cv2.THRESH_BINARY)[1]
-    if mode == 'adaptive':
-        return cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 6)
-    if mode == 'blur':
+    if mode == "adaptive":
+        return cv2.adaptiveThreshold(
+            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 6
+        )
+    if mode == "blur":
         kernel = max(1, min(99, int(amount))) | 1
         return cv2.GaussianBlur(image, (kernel, kernel), 0)
-    if mode == 'contours':
+    if mode == "contours":
         output = image.copy()
         mask = cv2.threshold(gray, amount, 255, cv2.THRESH_BINARY_INV)[1]
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -118,7 +183,11 @@ def effect(image, mode, amount=100):
 
 def video_loop(source, transform, output=None, show=True):
     """Read before transforming, preserve FPS, and release on every exit."""
-    source = int(source) if str(source).isdigit() else str(Path(source).expanduser().resolve())
+    source = (
+        int(source)
+        if str(source).isdigit()
+        else str(Path(source).expanduser().resolve())
+    )
     capture = cv2.VideoCapture(source)
     writer = None
     frames = 0
@@ -136,16 +205,27 @@ def video_loop(source, transform, output=None, show=True):
             result = transform(frame)
             if output and writer is None:
                 Path(output).parent.mkdir(parents=True, exist_ok=True)
-                writer = cv2.VideoWriter(str(output), cv2.VideoWriter_fourcc(*'mp4v'), fps, (result.shape[1], result.shape[0]))
+                writer = cv2.VideoWriter(
+                    str(output),
+                    cv2.VideoWriter_fourcc(*"mp4v"),
+                    fps,
+                    (result.shape[1], result.shape[0]),
+                )
                 if not writer.isOpened():
                     raise ValueError(f"Cannot open video output: {output}")
             if writer:
                 writer.write(result)
             frames += 1
             if show:
-                cv2.imshow('Vision lab — Q to stop', result)
-                key = cv2.waitKey(max(1, round(1000 / fps))) & 0xff
-                if key in (ord('q'), 27) or cv2.getWindowProperty('Vision lab — Q to stop', cv2.WND_PROP_VISIBLE) < 1:
+                cv2.imshow("Vision lab — Q to stop", result)
+                key = cv2.waitKey(max(1, round(1000 / fps))) & 0xFF
+                if (
+                    key in (ord("q"), 27)
+                    or cv2.getWindowProperty(
+                        "Vision lab — Q to stop", cv2.WND_PROP_VISIBLE
+                    )
+                    < 1
+                ):
                     break
     finally:
         capture.release()
