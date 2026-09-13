@@ -68,18 +68,21 @@ test('face sensitivity updates existing redaction without stale regions',async({
  await page.getByRole('button',{name:'Try face example',exact:true}).click();await expect(page.locator('.vision-readout')).toContainText('1 region');
 });
 
-test('tiger upload-only mode clears the previous source and exports pose results',async({page})=>{
+test('tiger validation examples run, switch cleanly, and allow uploads and exports',async({page})=>{
  await models(page);await run(page);
  await page.getByRole('group',{name:'Trained model',exact:true}).getByRole('button',{name:'Tiger pose',exact:true}).click();
- await expect(page.getByRole('button',{name:'Run model',exact:true})).toBeDisabled();
  await expect(page.getByRole('button',{name:'Save results',exact:true})).toHaveCount(0);
- await expect(page.locator('.vision-model-image figcaption')).toHaveText('Upload a tiger photo');
- await expect(page.locator('.vision-evaluation')).toContainText('one video');
- // A repository-owned negative image exercises transport and inference without
- // redistributing frames from the external tiger video.
- await page.getByLabel('Upload model image',{exact:true}).setInputFiles('web/assets/model-examples/alpaca.png');await run(page);
- const actual=await result(page);expect(actual.kind).toBe('pose');expect(actual.model).toBe('tiger');expect(actual.source).toBe('alpaca.png');
- for(const box of actual.boxes){expect(box.keypoints).toHaveLength(12);expect(box.keypoints.every(point=>Number.isFinite(point.x)&&Number.isFinite(point.y))).toBe(true);}
+ await expect(page.locator('.vision-model-intro')).toContainText('validation frames');
+ for(const frame of [170,190,210]){
+  await page.getByRole('group',{name:'Model examples',exact:true}).getByRole('button',{name:`Frame ${frame}`,exact:true}).click();
+  await expect(page.getByRole('button',{name:'Save results',exact:true})).toHaveCount(0);
+  await expect(page.locator('.vision-model-image figcaption')).toHaveText(`Frame ${frame} example`);
+  await run(page);const actual=await result(page);
+  expect(actual.kind).toBe('pose');expect(actual.model).toBe('tiger');expect(actual.source).toBe(`Frame ${frame} example`);
+  expect(actual.boxes.length).toBeGreaterThan(0);
+  for(const box of actual.boxes){expect(box.keypoints).toHaveLength(12);expect(box.keypoints.every(point=>Number.isFinite(point.x)&&Number.isFinite(point.y))).toBe(true);}
+ }
  const download=page.waitForEvent('download');await page.getByRole('button',{name:'Save annotated PNG',exact:true}).click();expect((await download).suggestedFilename()).toBe('tiger-keypoints.png');
+ await page.getByLabel('Upload model image',{exact:true}).setInputFiles('web/assets/model-examples/alpaca.png');await run(page);expect((await result(page)).source).toBe('alpaca.png');
  await page.getByRole('group',{name:'Trained model',exact:true}).getByRole('button',{name:'Weather',exact:true}).click();await expect(page.getByRole('button',{name:'Run model',exact:true})).toBeEnabled();
 });

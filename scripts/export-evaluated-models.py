@@ -179,7 +179,7 @@ for key in ["weather", "oct", "parking"]:
                 "top_class": meta["classes"][int(probs.argmax())],
             }
 if "tiger" in manifest["models"]:
-    manifest["examples"]["tiger"] = []
+    manifest["examples"].setdefault("tiger", [])
 manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
 (ROOT / "docs/verification/browser-export.json").write_text(
     json.dumps(evidence, indent=2) + "\n"

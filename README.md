@@ -91,7 +91,7 @@ Reproduce previews with `python scripts/verify-archive.py --archive /path/to/com
 
 ## Interactive models
 
-Open **Trained models** for Weather, Parking, Retinal OCT, Alpacas, and Tiger pose. Upload an image or select an available example, run the selected model locally, and export its output. Tiger pose requires an upload; source-video frames are not redistributed. Image tools add **Detect faces** under Region redaction and **Rectangle tracking** for uploaded images or an explicitly started camera. See [browser inference, reproduction, validation, and limits](docs/BROWSER-MODELS.md).
+Open **Trained models** for Weather, Parking, Retinal OCT, Alpacas, and Tiger pose. Upload an image or select an available example, run the selected model locally, and export its output. Tiger pose includes three labeled validation examples and also accepts uploads. Image tools add **Detect faces** under Region redaction and **Rectangle tracking** for uploaded images or an explicitly started camera. See [browser inference, reproduction, validation, and limits](docs/BROWSER-MODELS.md).
 
 ## Evaluated retraining
 

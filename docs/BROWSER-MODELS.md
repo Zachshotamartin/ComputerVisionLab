@@ -12,7 +12,7 @@ The **Trained models** switcher runs retrained weather and retinal OCT classifie
 | Alpaca | Image → boxes, scores, PNG/JSON export | Single-class detector; duplicate boxes are suppressed |
 | Face redaction | Image or optional camera → automatically pixelated face regions | Pretrained YuNet can miss faces; manual regions remain available |
 | Rectangle tracking | Image or optional camera → convex quadrilateral outlines | High-contrast 2D outlines; no depth, camera pose, or identity tracking |
-| Tiger pose | Uploaded image → boxes and 12 landmarks, PNG/JSON export | Separate one-video prototype; does not recover the missing 39-keypoint model |
+| Tiger pose | Validation example or uploaded image → boxes and 12 landmarks, PNG/JSON export | Separate one-video prototype; does not recover the missing 39-keypoint model |
 
 Model files download only when requested. ONNX Runtime 1.29.0 and its matching single-thread WebAssembly runtime are self-hosted; no external inference endpoint receives image pixels. Models have immutable hash filenames and are checked against byte/hash manifests. Switching away from the image tools stops camera tracks. Cancelling a trained-model run terminates the worker, including pending inference, and invalidates its response. A two-session LRU bounds model switching memory.
 
@@ -43,4 +43,4 @@ YOLO exports use fixed inputs (224×224 for weather, 128×128 for OCT, 640×640 
 - The face example is NASA's public-domain astronaut photograph distributed by [scikit-image](https://scikit-image.org/docs/0.20.x/api/skimage.data.html#skimage.data.astronaut), from version 0.25.2. Archive example provenance is recorded in `web/assets/models/manifest.json`; only representative reduced images are included, not the full datasets.
 - The rectangle fixture is generated geometry. It can be reproduced by the export script.
 
-- Tiger annotations come from [Ultralytics Tiger-Pose](https://docs.ultralytics.com/datasets/pose/tiger-pose/), drawn from one source video. The training download is checksum-pinned by `prepare-tiger-pose.py`. No downloaded tiger frames are included in the repository or browser examples. The annotation and upstream-model AGPL notice is included; source-video terms remain separate.
+- Tiger annotations come from [Ultralytics Tiger-Pose](https://docs.ultralytics.com/datasets/pose/tiger-pose/), drawn from one source video. The training download is checksum-pinned by `prepare-tiger-pose.py`. Three unmodified validation frames are included as labeled browser examples; they were used for checkpoint selection and are not independent test evidence. Reproduce them with `python scripts/prepare-tiger-examples.py` after preparing the frozen split. Source hashes and provenance are in `verification/tiger-examples.json`. The annotation and upstream-model AGPL notice is included; source-video terms remain separate.

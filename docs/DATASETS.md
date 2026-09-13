@@ -32,4 +32,4 @@ Each image needs a corresponding `.txt` label file. Each row contains `class x_c
 
 ## Evaluated splits and separate tiger prototype
 
-See [EVALUATION.md](EVALUATION.md) for the immutable weather, patient-grouped OCT, parking, and alpaca protocols. The original 39-keypoint configuration stays available. A separate 12-keypoint tiger dataset and chronological split can be prepared with `python scripts/prepare-tiger-pose.py --download`. All frames come from one video; do not describe its later-frame test as unseen-animal generalization. Downloaded frames remain outside Git.
+See [EVALUATION.md](EVALUATION.md) for the immutable weather, patient-grouped OCT, parking, and alpaca protocols. The original 39-keypoint configuration stays available. A separate 12-keypoint tiger dataset and chronological split can be prepared with `python scripts/prepare-tiger-pose.py --download`. All frames come from one video; do not describe its later-frame test as unseen-animal generalization. The full dataset remains outside Git; three validation frames are included as attributed browser examples.

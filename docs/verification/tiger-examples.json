@@ -1,0 +1,33 @@
+{
+  "dataset": "https://github.com/ultralytics/assets/releases/download/v0.0.0/tiger-pose.zip",
+  "source_video": "https://youtu.be/Gc6K5eKrTNQ",
+  "split_manifest_sha256": "670fb8309dd07a008e34ae4294eca6cd8b451977e39829bd880a9c0abde9fe03",
+  "selection": "Frames 170, 190, 210: evenly spaced within the validation partition, used for checkpoint selection. These are demonstration inputs, not new test evidence.",
+  "rights": "Dataset annotations are AGPL-3.0; source-video rights remain with the original owner. No blanket license is asserted over the photographs.",
+  "examples": [
+    {
+      "file": "tiger-validation-170.jpg",
+      "label": "Frame 170",
+      "partition": "validation",
+      "source": "images/val/Frame_170.jpg",
+      "sha256": "7a3ce0f78483ee170e3ceecdc2a06a8f9f73baebf97a63486e9b33926b4be0a4",
+      "bytes": 241871
+    },
+    {
+      "file": "tiger-validation-190.jpg",
+      "label": "Frame 190",
+      "partition": "validation",
+      "source": "images/val/Frame_190.jpg",
+      "sha256": "16fbe82758bc8d6f5317bb14e48d4e5db111f2227b9bf43aec1284ebd8838cfe",
+      "bytes": 227865
+    },
+    {
+      "file": "tiger-validation-210.jpg",
+      "label": "Frame 210",
+      "partition": "validation",
+      "source": "images/train/Frame_210.jpg",
+      "sha256": "7b6349a73919985619ab02183f16f728fa652b4987fad1cf938c1545625da06f",
+      "bytes": 197489
+    }
+  ]
+}
