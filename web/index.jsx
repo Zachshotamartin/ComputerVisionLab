@@ -1,1 +1,1 @@
-export { default } from './VisionLab.jsx';
+export {default} from './VisionWorkspace.jsx';

@@ -1,0 +1,158 @@
+{
+  "weather": {
+    "max_absolute_error": 8.940696716308594e-08,
+    "input_shape": [
+      1,
+      3,
+      64,
+      64
+    ],
+    "output_shape": [
+      1,
+      4
+    ],
+    "source_sha256": "8d17d2a422bdf3a1cc0a3ce4954612524c03a85d47d432946156ea2ce44685ed"
+  },
+  "oct": {
+    "max_absolute_error": 8.940696716308594e-08,
+    "input_shape": [
+      1,
+      3,
+      64,
+      64
+    ],
+    "output_shape": [
+      1,
+      4
+    ],
+    "source_sha256": "71418d03e8f46316245e5890da3ef980833d563cac6e32f71b4da4a39e026a0f"
+  },
+  "alpaca": {
+    "max_absolute_error": 0.000244140625,
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "output_shape": [
+      1,
+      5,
+      8400
+    ],
+    "source_sha256": "b7b4de184297d0c11ceb946f0551859db7994982c25e58ba1b725de813e05694"
+  },
+  "parking": {
+    "support_vectors": 91,
+    "features": 675,
+    "evaluation": {
+      "seed": 42,
+      "classes": [
+        "empty",
+        "not_empty"
+      ],
+      "training_samples": 480,
+      "test_samples": 120,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          60,
+          0
+        ],
+        [
+          0,
+          60
+        ]
+      ],
+      "best_parameters": {
+        "svc__C": 1,
+        "svc__gamma": "scale"
+      },
+      "skipped_files": [],
+      "evaluation": "Internal stratified image split with duplicate feature vectors removed. Not a held-out camera or location benchmark."
+    }
+  },
+  "examples": {
+    "weather-cloudy.png": {
+      "probabilities": [
+        0.9958727955818176,
+        0.002250347286462784,
+        0.001712281722575426,
+        0.00016448675887659192
+      ],
+      "top_class": "cloudy"
+    },
+    "weather-rain.png": {
+      "probabilities": [
+        0.004087828565388918,
+        0.9861415028572083,
+        0.007280739489942789,
+        0.0024898936972022057
+      ],
+      "top_class": "rain"
+    },
+    "weather-shine.png": {
+      "probabilities": [
+        0.0005059289978817105,
+        1.6484615343870246e-06,
+        0.9990792274475098,
+        0.0004131281457375735
+      ],
+      "top_class": "shine"
+    },
+    "weather-sunrise.png": {
+      "probabilities": [
+        3.5153927910869243e-06,
+        1.796025514977373e-07,
+        0.00011275362339802086,
+        0.9998835325241089
+      ],
+      "top_class": "sunrise"
+    },
+    "oct-cnv.png": {
+      "probabilities": [
+        0.9997583031654358,
+        2.0286772269173525e-05,
+        0.00021540516172535717,
+        6.064496119506657e-06
+      ],
+      "top_class": "CNV"
+    },
+    "oct-dme.png": {
+      "probabilities": [
+        0.0007786015630699694,
+        0.9986936450004578,
+        0.00023472400789614767,
+        0.0002930705377366394
+      ],
+      "top_class": "DME"
+    },
+    "oct-drusen.png": {
+      "probabilities": [
+        0.006144125945866108,
+        7.192499469965696e-05,
+        0.9935612678527832,
+        0.000222714981646277
+      ],
+      "top_class": "DRUSEN"
+    },
+    "oct-normal.png": {
+      "probabilities": [
+        0.0006018403801135719,
+        0.001638125511817634,
+        0.005467893090099096,
+        0.9922921657562256
+      ],
+      "top_class": "NORMAL"
+    },
+    "parking-empty.png": {
+      "decision_margin": -1.260441165502409,
+      "class": "empty"
+    },
+    "parking-not_empty.png": {
+      "decision_margin": 0.8547156697147021,
+      "class": "not_empty"
+    }
+  }
+}

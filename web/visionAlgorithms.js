@@ -1,3 +1,4 @@
+import {findRectangles} from './rectangles.js';
 /** Pure, bounded image operations shared by the browser worker and tests. */
 export function rgbToHsv(r, g, b) {
   r /= 255; g /= 255; b /= 255;
@@ -74,6 +75,7 @@ export function processImage({ data, width, height }, options = {}) {
   const output = new Uint8ClampedArray(data), gray = new Uint8ClampedArray(width * height);
   for (let i = 0; i < gray.length; i++) gray[i] = .2126 * data[i * 4] + .7152 * data[i * 4 + 1] + .0722 * data[i * 4 + 2];
   let boxes = [], selectedPixels = 0;
+  if (mode === 'rectangles') return {data:output,width,height,boxes:findRectangles(data,width,height,amount),selectedPixels:0};
   if (mode === 'blur') return { data: boxBlur(data, width, height, Math.max(1, Math.min(20, Math.round(amount / 12)))), width, height, boxes, selectedPixels };
   if (mode === 'color' || mode === 'overlay') {
     if (!/^#[a-f\d]{6}$/i.test(color)) throw new Error('Choose a six-digit hex color.');

@@ -1,0 +1,43 @@
+# Browser inference
+
+The **Trained models** switcher runs the user's saved weather and retinal OCT YOLOv8 classifiers, saved alpaca detector, and repaired parking-space SVM. These are exported checkpoints, not a replacement general-purpose classifier or fabricated examples. Image tools also offer automatic face redaction using the separately attributed pretrained YuNet detector, and geometric rectangle tracking.
+
+## What each tool supports
+
+| Tool | Inputs and outputs | Important boundary |
+| --- | --- | --- |
+| Weather | Image → cloudy/rain/shine/sunrise scores | Four known classes; a center crop is used |
+| Parking | One parking-space crop → empty/occupied and SVM margin | The margin is not a probability; full parking lots are outside training |
+| Retinal OCT | Scan → CNV/DME/DRUSEN/NORMAL scores | Archived educational model, no clinical validation |
+| Alpaca | Image → boxes, scores, PNG/JSON export | Single-class detector; duplicate boxes are suppressed |
+| Face redaction | Image or optional camera → automatically pixelated face regions | Pretrained YuNet can miss faces; manual regions remain available |
+| Rectangle tracking | Image or optional camera → convex quadrilateral outlines | High-contrast 2D outlines; no depth, camera pose, or identity tracking |
+| Animal pose | Validated training configuration | No supplied keypoint annotations or trained checkpoint; no working model is claimed |
+
+Model files download only when requested. ONNX Runtime 1.29.0 and its matching single-thread WebAssembly runtime are self-hosted; no external inference endpoint receives image pixels. Models have immutable hash filenames and are checked against byte/hash manifests. Switching away from the image tools stops camera tracks. Cancelling a trained-model run terminates the worker, including pending inference, and invalidates its response. A two-session LRU bounds model switching memory.
+
+## Reproduce exports
+
+Use the archive's trusted Python environment with PyTorch, Ultralytics, scikit-learn, ONNX 1.20.1, and ONNX Runtime 1.24.2. The exporter reads original artifacts and writes only to this repository's generated `output/` and browser asset directories:
+
+```sh
+python scripts/export-browser-models.py --archive /path/to/computervision
+npm run prepare:support
+npm run prepare:runtime
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run build
+```
+
+YOLO exports use fixed inputs (64×64 for classification, 640×640 for alpacas), opset 17 and original weights. `modelMath.js` implements RGB normalization and antialiased center-crop preprocessing, area-resized SVM features, letterboxing, and bounding-box decoding/NMS. The parking JSON contains the saved scaler and RBF support vectors; it preserves the classifier rather than approximating its output with new scores. YuNet uses BGR 0–255 input and its stride-based output decoder.
+
+`verification/browser-export.json` records source checkpoint hashes, PyTorch-versus-ONNX numeric checks, and reference predictions on the shipped examples. Browser tests compare all ten classifier examples with the Python results (class-score tolerance 0.02; SVM-margin tolerance 0.002), exercise alpaca detection and exports, face redaction, perspective rectangles, cancellation/retry, uploads, mobile layout, and camera cleanup. These checks establish functioning inference and conversion parity, not independent accuracy or generalization.
+
+## Sources and licenses
+
+- The weather, OCT and alpaca exports derive from the user's 2024 [Ultralytics YOLOv8](https://docs.ultralytics.com/models/yolov8/) checkpoints. Ultralytics' AGPL-3.0 text is included in `web/assets/models/YOLO-LICENSE.txt`; original checkpoint hashes and relative locations are recorded in the manifest and export report.
+- [YuNet from OpenCV Zoo](https://github.com/opencv/opencv_zoo/tree/47534e27c9851bb1128ccc0102f1145e27f23f98/models/face_detection_yunet) is separately pretrained and MIT licensed. It is not presented as the user's trained model. Its license is included.
+- [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/deploy.html) is MIT licensed; runtime notices accompany the matching binaries.
+- The face example is NASA's public-domain astronaut photograph distributed by [scikit-image](https://scikit-image.org/docs/0.20.x/api/skimage.data.html#skimage.data.astronaut), from version 0.25.2. Archive example provenance is recorded in `web/assets/models/manifest.json`; only representative reduced images are included, not the full datasets.
+- The rectangle fixture is generated geometry. It can be reproduced by the export script.
