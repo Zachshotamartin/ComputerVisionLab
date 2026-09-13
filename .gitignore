@@ -12,3 +12,5 @@ data/
 *.egg-info/
 .repair-backup/
 dist/
+test-results/
+playwright-report/

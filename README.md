@@ -1,6 +1,6 @@
 # Computer Vision Lab
 
-Working image-processing, classification, detection, and camera experiments, rebuilt from my 2024 OpenCV and YOLO course projects. The browser lab makes six operations interactive; the Python tools restore the original training and inference workflows; the native macOS app tracks rectangular surfaces.
+Working image-processing, classification, detection, and camera experiments, rebuilt from my 2024 OpenCV and YOLO course projects. The browser lab runs the saved classifiers and alpaca detector alongside image processing, automatic face redaction, and rectangle tracking; the Python tools restore the original training and inference workflows; the native macOS app tracks rectangular surfaces.
 
 ![Computed hue mask and region bounds on a hummingbird photograph](web/assets/cover.webp)
 
@@ -10,7 +10,7 @@ Working image-processing, classification, detection, and camera experiments, reb
 | --- | --- | --- |
 | Image processing | Read, export, crop, resize, threshold, blur, find contours and edges | [Python](python/visionlab/imaging.py), [browser algorithms](web/visionAlgorithms.js) |
 | Color tracking | Circular HSV selection and independent connected regions | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
-| Redaction | Automatic frontal-face detection in Python; manually selected pixelation in the browser | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
+| Redaction | Automatic face detection and manual region pixelation in Python and the browser | [Python](python/visionlab/imaging.py), [browser lab](web/VisionLab.jsx) |
 | Weather classification | Restore an existing YOLOv8 classifier or train with explicit validation | [CLI](python/visionlab/cli.py) |
 | Parking classification | Reproducible SVM with shared preprocessing, duplicate removal, and cross-validation | [Parking pipeline](python/visionlab/parking.py) |
 | Alpaca detection | Validate annotations, train, and stream predictions from saved checkpoints | [Dataset configuration](configs/alpaca.yaml) |
@@ -57,7 +57,7 @@ vision-lab parking --data /path/to/parking/data --limit 300 --model output/parki
 python -m unittest discover -s python/tests -v
 ```
 
-Install just `pip install -e .` for basic OpenCV operations. The `models` extra adds YOLO; the `parking` extra adds scikit-learn. Weights and datasets remain external. Paths with spaces and apostrophes are supported, including during YOLO's final training validation.
+Install just `pip install -e .` for basic OpenCV operations. The `models` extra adds YOLO; the `parking` extra adds scikit-learn. Original checkpoints and full datasets remain external. Verified browser model exports and small examples are included. Paths with spaces and apostrophes are supported, including during YOLO's final training validation.
 
 ## Native macOS app
 
@@ -85,6 +85,10 @@ scripts/             reproducible archive checks
 
 Read [what changed](docs/REPAIRS.md), [dataset requirements](docs/DATASETS.md), and [validation and remaining limitations](docs/VALIDATION.md). The animal-pose archive has no image/keypoint annotations, so training correctly stops before loading a model. The OCT experiment has no clinical validation and needs a separate validation split. No model-accuracy improvement over the old checkpoints is claimed.
 
-These are course-derived explorations with new repair work and a browser implementation. [Upstream attribution](NOTICE.md) is retained. Dataset images used in the larger original projects, model weights, virtual environments, and old generated training runs are not included in this repository.
+These are course-derived explorations with new repair work and a browser implementation. [Upstream attribution](NOTICE.md) is retained. Full datasets, original PyTorch checkpoints, virtual environments, and historical training runs remain outside this repository. The browser-ready model exports, runtime, and representative inputs are included with provenance and licenses.
 
 Reproduce previews with `python scripts/verify-archive.py --archive /path/to/computervision`, followed by `python scripts/build-assets.py --archive /path/to/computervision`.
+
+## Interactive saved models
+
+Open **Trained models** for Weather, Parking, Retinal OCT, and Alpacas. Upload an image or select an example, run the original saved model locally, and export its output. Image tools add **Detect faces** under Region redaction and **Rectangle tracking** for uploaded images or an explicitly started camera. See [browser inference, reproduction, validation, and limits](docs/BROWSER-MODELS.md).
