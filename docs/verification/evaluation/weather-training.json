@@ -1,0 +1,14 @@
+{
+  "task": "weather",
+  "size": 224,
+  "epochs_requested": 25,
+  "duration_seconds": 119.49203395843506,
+  "pretrained": "computervision/imageclassification/pneumonia_classifier/yolov8n-cls.pt",
+  "best_checkpoint": "ComputerVisionLab/output/evaluation/training/weather-224/weights/best.pt",
+  "validation": {
+    "metrics/accuracy_top1": 0.9576719403266907,
+    "metrics/accuracy_top5": 1.0,
+    "fitness": 0.9788359701633453
+  },
+  "selection": "Best epoch by development validation only; frozen test split is not used during fitting."
+}

@@ -1,0 +1,102 @@
+{
+  "protocol": "Grouped evaluation; final test is excluded from fitting and epoch selection. Legacy checkpoints saw portions of regrouped weather/OCT/parking data and cannot provide independent comparison scores.",
+  "models": {
+    "weather": {
+      "checkpoint": "output/evaluation/training/weather-224/weights/best.pt",
+      "size": 224,
+      "kind": "classify",
+      "report": "weather-candidate",
+      "decision": "Prefer independently evaluated grouped training to contaminated legacy split."
+    },
+    "oct": {
+      "checkpoint": "output/evaluation/training/oct-128/weights/best.pt",
+      "size": 128,
+      "kind": "classify",
+      "report": "oct-candidate",
+      "decision": "Use patient-separated training and evaluation; no clinical validation."
+    },
+    "parking": {
+      "checkpoint": "output/evaluation/parking-grouped.joblib",
+      "size": 15,
+      "kind": "svm",
+      "report": "parking",
+      "decision": "Prefer grouped cross-validation and sequence separation; unseen cameras remain untested."
+    },
+    "alpaca": {
+      "checkpoint": "output/evaluation/training/alpaca-640/weights/best.pt",
+      "size": 640,
+      "kind": "detect",
+      "report": "alpaca-candidate",
+      "decision": "Fresh pretrained initialization; best development checkpoint. Frozen test mAP50 improved from 0.7655 to 0.8613 and mAP50-95 from 0.4479 to 0.6843. Negative-image false detections remain (3/6 at 0.35)."
+    },
+    "tiger": {
+      "checkpoint": "output/evaluation/training/tiger-320/weights/best.pt",
+      "size": 320,
+      "kind": "pose",
+      "report": "tiger-candidate",
+      "decision": "Publish as a separate limited prototype. Later-frame pose mAP50 is 0.9623, but stricter mAP50-95 is 0.2371. Approximate landmarks and same-video evaluation do not establish general animal pose estimation."
+    }
+  },
+  "pose": {
+    "keypoints": [
+      "nose",
+      "head",
+      "withers",
+      "tail_base",
+      "right_hind_hock",
+      "right_hind_paw",
+      "left_hind_paw",
+      "left_hind_hock",
+      "right_front_wrist",
+      "right_front_paw",
+      "left_front_wrist",
+      "left_front_paw"
+    ],
+    "skeleton": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        10,
+        11
+      ]
+    ]
+  }
+}

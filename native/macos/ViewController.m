@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#import "RectangleEdges.h"
 @import AVFoundation;
 @import Vision;
 @import QuartzCore;
@@ -121,7 +122,14 @@
         dispatch_async(dispatch_get_main_queue(), ^{ if (self.requestedRunning) self.status.stringValue = error.localizedDescription; });
         return;
     }
-    NSArray<VNRectangleObservation *> *rectangles = request.results;
+    NSMutableArray<VNRectangleObservation *> *rectangles = [NSMutableArray array];
+    CVPixelBufferRef pixels = CMSampleBufferGetImageBuffer(buffer);
+    if (pixels && CVPixelBufferLockBaseAddress(pixels, kCVPixelBufferLock_ReadOnly) == kCVReturnSuccess) {
+        for (VNRectangleObservation *rectangle in request.results) {
+            if (CVHasStraightEdges(rectangle, CVPixelBufferGetBaseAddress(pixels), CVPixelBufferGetWidth(pixels), CVPixelBufferGetHeight(pixels), CVPixelBufferGetBytesPerRow(pixels))) [rectangles addObject:rectangle];
+        }
+        CVPixelBufferUnlockBaseAddress(pixels, kCVPixelBufferLock_ReadOnly);
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         if (!self.requestedRunning) return;
         CGMutablePathRef path = CGPathCreateMutable();

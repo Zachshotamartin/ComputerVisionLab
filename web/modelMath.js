@@ -104,3 +104,19 @@ export function decodeFaces(outputs,geometry,size=640,threshold=.7) {
  }
  return suppress(boxes,.3,30);
 }
+
+/** Decode the explicit 12×2 landmark layout of the separately trained tiger prototype. */
+export function decodePose(values,geometry,keypoints,threshold=.25) {
+ const channels=5+keypoints.length*2,count=values.length/channels,boxes=[];
+ if(!Number.isInteger(count))throw new Error('Unexpected pose output dimensions');
+ for(let i=0;i<count;i++)if(values[count*4+i]>=threshold){
+  const box=sourceBox(values[i],values[count+i],values[count*2+i],values[count*3+i],values[count*4+i],geometry);
+  if(box.width<=1||box.height<=1)continue;
+  const points=keypoints.map((name,j)=>{
+   const x=(values[count*(5+j*2)+i]-geometry.left)/geometry.scale,y=(values[count*(6+j*2)+i]-geometry.top)/geometry.scale;
+   return {name,x,y,inFrame:Number.isFinite(x)&&Number.isFinite(y)&&x>=0&&y>=0&&x<=geometry.width&&y<=geometry.height};
+  });
+  boxes.push({...box,label:'tiger',keypoints:points});
+ }
+ return suppress(boxes);
+}

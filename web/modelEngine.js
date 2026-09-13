@@ -1,6 +1,8 @@
 import manifest from './assets/models/manifest.json' with { type: 'json' };
 import runtime from './assets/runtime/manifest.json' with { type: 'json' };
-import {validateImage,classificationTensor,letterboxTensor,parkingPrediction,decodeAlpacas,decodeFaces} from './modelMath.js';
+import {validateImage,classificationTensor,letterboxTensor,parkingPrediction,decodeAlpacas,decodeFaces,decodePose} from './modelMath.js';
+
+import {decodeParkingModel} from './parkingFormat.js';
 
 const sessions=new Map();
 let runtimePromise;
@@ -34,7 +36,7 @@ async function sessionFor(base,key,progress) {
  if(sessions.size>=2){const oldest=sessions.keys().next().value;const previous=await sessions.get(oldest);await previous.session?.release();sessions.delete(oldest);}
  const task=(async()=>{
   const bytes=await readModel(base,key,progress);
-  if(key==='parking')return {model:JSON.parse(new TextDecoder().decode(bytes))};
+  if(key==='parking')return {model:manifest.models.parking.file.endsWith('.bin')?decodeParkingModel(bytes):JSON.parse(new TextDecoder().decode(bytes))};
   progress?.('Preparing local inference…');
   const ort=await getRuntime(base);
   const session=await ort.InferenceSession.create(bytes,{executionProviders:['wasm'],graphOptimizationLevel:'all'});
@@ -64,7 +66,7 @@ export async function inferModel(image,key,{assetBase,threshold=.25,progress}={}
    const scores=meta.classes.map((label,index)=>({label,score:values[index]})).sort((a,b)=>b.score-a.score);
    return {kind:'classify',label:scores[0].label,scores,milliseconds:performance.now()-start};
   }
-  const boxes=key==='face'?decodeFaces(outputs,geometry,meta.size,threshold):decodeAlpacas(outputs[session.outputNames[0]].data,geometry,threshold);
+  const boxes=key==='face'?decodeFaces(outputs,geometry,meta.size,threshold):meta.kind==='pose'?decodePose(outputs[session.outputNames[0]].data,geometry,meta.keypoints,threshold):decodeAlpacas(outputs[session.outputNames[0]].data,geometry,threshold);
   return {kind:meta.kind,boxes,milliseconds:performance.now()-start};
  }finally{tensor.dispose();if(outputs)Object.values(outputs).forEach(output=>output.dispose());}
 }

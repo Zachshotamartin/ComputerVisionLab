@@ -1,0 +1,14 @@
+{
+  "task": "oct",
+  "size": 128,
+  "epochs_requested": 20,
+  "duration_seconds": 1096.0694699287415,
+  "pretrained": "computervision/imageclassification/pneumonia_classifier/yolov8n-cls.pt",
+  "best_checkpoint": "ComputerVisionLab/output/evaluation/training/oct-128/weights/best.pt",
+  "validation": {
+    "metrics/accuracy_top1": 0.8758333325386047,
+    "metrics/accuracy_top5": 1.0,
+    "fitness": 0.9379166662693024
+  },
+  "selection": "Best epoch by development validation only; frozen test split is not used during fitting."
+}

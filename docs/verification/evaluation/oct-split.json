@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "task": "oct",
+  "source": "imageclassification/pneumonia_classifier/data",
+  "grouping": "patient ID plus exact hashes",
+  "counts": {
+    "train": {
+      "CNV": 1500,
+      "DME": 1500,
+      "DRUSEN": 1500,
+      "NORMAL": 1500
+    },
+    "val": {
+      "CNV": 300,
+      "DME": 300,
+      "DRUSEN": 300,
+      "NORMAL": 300
+    },
+    "test": {
+      "CNV": 300,
+      "DME": 300,
+      "DRUSEN": 300,
+      "NORMAL": 300
+    }
+  },
+  "legacy_comparison": "Original checkpoints saw training/validation images in these regrouped sets. Their scores are descriptive only; new candidate hold-outs are independent of candidate fitting.",
+  "manifest_sha256": "23d70e71260827b554ddbc4b79f70ce0327638e792cff50225a0eda62117f14c",
+  "groups": {
+    "train": 1465,
+    "val": 379,
+    "test": 365
+  },
+  "excluded_count": 30473
+}

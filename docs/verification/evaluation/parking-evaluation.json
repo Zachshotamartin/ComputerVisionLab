@@ -1,0 +1,115 @@
+{
+  "seed": 42,
+  "grouping": "sorted numeric filename prefixes, contiguous 60/20/20 ranges, two-prefix embargo on each side; camera identity unknown",
+  "duplicate_feature_vectors_removed": 0,
+  "counts": {
+    "test": {
+      "images": 1278,
+      "classes": [
+        648,
+        630
+      ],
+      "groups": 26
+    },
+    "val": {
+      "images": 1179,
+      "classes": [
+        612,
+        567
+      ],
+      "groups": 24
+    },
+    "train": {
+      "images": 3201,
+      "classes": [
+        1605,
+        1596
+      ],
+      "groups": 82
+    }
+  },
+  "best_parameters": {
+    "svc__C": 0.1,
+    "svc__gamma": "scale"
+  },
+  "cross_validation": 1.0,
+  "candidate_validation": {
+    "samples": 1179,
+    "groups": 24,
+    "accuracy": 0.9974554707379135,
+    "balanced_accuracy": 0.9975490196078431,
+    "confusion_matrix": [
+      [
+        609,
+        3
+      ],
+      [
+        0,
+        567
+      ]
+    ],
+    "errors": [
+      {
+        "path": "empty/00000610_00000280.jpg",
+        "truth": 0,
+        "prediction": 1,
+        "margin": 0.012286735851682273
+      },
+      {
+        "path": "empty/00000620_00000280.jpg",
+        "truth": 0,
+        "prediction": 1,
+        "margin": 0.036108019323028095
+      },
+      {
+        "path": "empty/00000630_00000280.jpg",
+        "truth": 0,
+        "prediction": 1,
+        "margin": 0.05100398175532295
+      }
+    ]
+  },
+  "candidate_test": {
+    "samples": 1278,
+    "groups": 26,
+    "accuracy": 0.9992175273865415,
+    "balanced_accuracy": 0.9992063492063492,
+    "confusion_matrix": [
+      [
+        648,
+        0
+      ],
+      [
+        1,
+        629
+      ]
+    ],
+    "errors": [
+      {
+        "path": "not_empty/00000846_00000046.jpg",
+        "truth": 1,
+        "prediction": 0,
+        "margin": -0.04171628152065687
+      }
+    ]
+  },
+  "duration_seconds": 6.148582935333252,
+  "legacy_on_same_test": {
+    "samples": 1278,
+    "groups": 26,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        648,
+        0
+      ],
+      [
+        0,
+        630
+      ]
+    ],
+    "errors": []
+  },
+  "legacy_limit": "Legacy model used a random sample from the full archive and may have seen this holdout. Its score is descriptive, not an independent benchmark."
+}

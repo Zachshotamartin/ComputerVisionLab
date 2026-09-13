@@ -1,0 +1,16 @@
+{
+  "task": "alpaca",
+  "checkpoint_sha256": "b7b4de184297d0c11ceb946f0551859db7994982c25e58ba1b725de813e05694",
+  "input_size": 640,
+  "split_manifest_sha256": "3accfbe9c9d3e3b9f7be2d7fe1f50eb7bc5a83d3b08e5b0e1184aea5a5f9be97",
+  "metrics": {
+    "metrics/precision(B)": 0.7683663473327763,
+    "metrics/recall(B)": 0.6940298507462687,
+    "metrics/mAP50(B)": 0.765478928785359,
+    "metrics/mAP50-95(B)": 0.44786141319034006,
+    "fitness": 0.44786141319034006
+  },
+  "images": 72,
+  "save_dir": "ComputerVisionLab/output/evaluation/detection/alpaca-legacy",
+  "scope": "Frozen held-out images; tiger frames come from one video and do not demonstrate unseen-animal generalization."
+}

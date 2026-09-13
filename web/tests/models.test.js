@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {PNG} from 'pngjs';
 import {classificationTensor,parkingPrediction,decodeAlpacas,decodeFaces,suppress,validateImage} from '../modelMath.js';
+import {decodeParkingModel} from '../parkingFormat.js';
 import {findRectangles} from '../rectangles.js';
 const asset=new URL('../assets/',import.meta.url);
 const manifest=JSON.parse(readFileSync(new URL('models/manifest.json',asset)));
@@ -19,7 +20,8 @@ test('every shipped model and runtime matches its pinned byte/hash manifest',()=
 });
 
 test('parking decision margins match the repaired Python pipeline on both classes',()=>{
- const model=JSON.parse(readFileSync(new URL('models/'+manifest.models.parking.file,asset)));
+ const raw=readFileSync(new URL('models/'+manifest.models.parking.file,asset));
+ const model=manifest.models.parking.file.endsWith('.bin')?decodeParkingModel(raw.buffer.slice(raw.byteOffset,raw.byteOffset+raw.byteLength)):JSON.parse(raw);
  for(const name of ['parking-empty.png','parking-not_empty.png']){const actual=parkingPrediction(png(name),model),expected=evidence.examples[name];assert.equal(actual.label,expected.class);assert.ok(Math.abs(actual.margin-expected.decision_margin)<.002,`${name}: ${actual.margin}`);}
 });
 
@@ -47,4 +49,41 @@ test('rectangle tracking finds perspective corners and rejects blank images',()=
  const image=PNG.sync.read(readFileSync(new URL('rectangles.png',asset)));
  const boxes=findRectangles(image.data,image.width,image.height,100);assert.equal(boxes.length,2);assert.ok(boxes.every(box=>box.corners.length===4));
  assert.deepEqual(findRectangles(new Uint8Array(128*128*4),128,128,100),[]);
+});
+
+test('rectangle detection handles dim blurred surfaces without treating a disk as a rectangle',()=>{
+ const width=160,height=120;
+ function fixture(shape){
+  const data=new Uint8ClampedArray(width*height*4);
+  for(let y=0;y<height;y++)for(let x=0;x<width;x++){
+   const inside=shape==='rectangle'?x>=25&&x<135&&y>=20&&y<100:((x-80)**2+(y-60)**2<45**2);
+   const value=inside?55:30,p=(y*width+x)*4;data[p]=data[p+1]=data[p+2]=value;data[p+3]=255;
+  }
+  return data;
+ }
+ assert.equal(findRectangles(fixture('rectangle'),width,height).length,1);
+ assert.deepEqual(findRectangles(fixture('disk'),width,height),[]);
+});
+
+test('pose landmarks undo letterbox coordinates without inventing visibility scores',async()=>{
+ const {decodePose}=await import('../modelMath.js');
+ const decoded=decodePose(new Float32Array([100,100,80,60,.9,60,70,140,130]),{scale:2,left:10,top:20,width:100,height:100},['nose','tail']);
+ assert.equal(decoded.length,1);assert.deepEqual(decoded[0].keypoints.map(({name,x,y,inFrame})=>({name,x,y,inFrame})),[{name:'nose',x:25,y:25,inFrame:true},{name:'tail',x:65,y:55,inFrame:true}]);
+ assert.throws(()=>decodePose(new Float32Array(8),{scale:1,left:0,top:0,width:100,height:100},['nose','tail']));
+});
+
+
+test('parking binary transport rejects corrupt and truncated payloads',()=>{
+ const raw=readFileSync(new URL('models/'+manifest.models.parking.file,asset));
+ const buffer=raw.buffer.slice(raw.byteOffset,raw.byteOffset+raw.byteLength);
+ assert.throws(()=>decodeParkingModel(buffer.slice(0,7)),/format/);
+ assert.throws(()=>decodeParkingModel(buffer.slice(0,-4)),/Incomplete/);
+ const corrupt=buffer.slice(0);new DataView(corrupt).setUint32(4,20000,true);
+ assert.throws(()=>decodeParkingModel(corrupt),/header/);
+});
+
+
+test('published evaluations identify the exact shipped training checkpoint',()=>{
+ const report=JSON.parse(readFileSync(new URL('evaluation.json',asset)));
+ for(const [key,item] of Object.entries(report.models))if(item.source_checkpoint_sha256)assert.equal(item.source_checkpoint_sha256,manifest.models[key].trainingSha,key);
 });

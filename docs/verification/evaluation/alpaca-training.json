@@ -1,0 +1,16 @@
+{
+  "task": "alpaca",
+  "size": 640,
+  "epochs_requested": 30,
+  "duration_seconds": 1036.5294070243835,
+  "pretrained": "yolov8n.pt",
+  "best_checkpoint": "ComputerVisionLab/output/evaluation/training/alpaca-640/weights/best.pt",
+  "validation": {
+    "metrics/precision(B)": 0.8852820760523399,
+    "metrics/recall(B)": 0.74118987740319,
+    "metrics/mAP50(B)": 0.8513855828516914,
+    "metrics/mAP50-95(B)": 0.6678644117531407,
+    "fitness": 0.6678644117531407
+  },
+  "selection": "Best epoch by development validation only; frozen test split is not used during fitting."
+}

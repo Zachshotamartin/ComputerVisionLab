@@ -1,34 +1,34 @@
 {
   "weather": {
-    "max_absolute_error": 8.940696716308594e-08,
+    "max_absolute_error": 1.1175870895385742e-08,
     "input_shape": [
       1,
       3,
-      64,
-      64
+      224,
+      224
     ],
     "output_shape": [
       1,
       4
     ],
-    "source_sha256": "8d17d2a422bdf3a1cc0a3ce4954612524c03a85d47d432946156ea2ce44685ed"
+    "source_sha256": "5348394a1b49a536147404d8efec0990b04bf80577c8c1f8f08009a417ce6f0b"
   },
   "oct": {
-    "max_absolute_error": 8.940696716308594e-08,
+    "max_absolute_error": 1.4901161193847656e-07,
     "input_shape": [
       1,
       3,
-      64,
-      64
+      128,
+      128
     ],
     "output_shape": [
       1,
       4
     ],
-    "source_sha256": "71418d03e8f46316245e5890da3ef980833d563cac6e32f71b4da4a39e026a0f"
+    "source_sha256": "6614cd6d81971e1aa5d17b0b10a3cb8b042665e43ff03498731935a2216da096"
   },
   "alpaca": {
-    "max_absolute_error": 0.000244140625,
+    "max_absolute_error": 0.001617431640625,
     "input_shape": [
       1,
       3,
@@ -40,119 +40,210 @@
       5,
       8400
     ],
-    "source_sha256": "b7b4de184297d0c11ceb946f0551859db7994982c25e58ba1b725de813e05694"
+    "source_sha256": "15033585248bbbfd5a6e82f0aa47948ac586d59dd2db16417074fca670f9583b"
   },
   "parking": {
-    "support_vectors": 91,
+    "support_vectors": 512,
     "features": 675,
-    "evaluation": {
-      "seed": 42,
-      "classes": [
-        "empty",
-        "not_empty"
-      ],
-      "training_samples": 480,
-      "test_samples": 120,
-      "accuracy": 1.0,
-      "balanced_accuracy": 1.0,
-      "confusion_matrix": [
-        [
-          60,
-          0
-        ],
-        [
-          0,
-          60
-        ]
-      ],
-      "best_parameters": {
-        "svc__C": 1,
-        "svc__gamma": "scale"
-      },
-      "skipped_files": [],
-      "evaluation": "Internal stratified image split with duplicate feature vectors removed. Not a held-out camera or location benchmark."
-    }
+    "source_sha256": "52ab933e142577bd098eaa80115ce724f718aa0c64d81ae81a846abd633ca52a"
   },
   "examples": {
     "weather-cloudy.png": {
       "probabilities": [
-        0.9958727955818176,
-        0.002250347286462784,
-        0.001712281722575426,
-        0.00016448675887659192
+        0.9998236298561096,
+        3.7025094457021623e-07,
+        0.00017574177763890475,
+        2.5608261466913973e-07
       ],
       "top_class": "cloudy"
     },
     "weather-rain.png": {
       "probabilities": [
-        0.004087828565388918,
-        0.9861415028572083,
-        0.007280739489942789,
-        0.0024898936972022057
+        1.7026406567310914e-05,
+        0.9999468326568604,
+        1.190072998724645e-05,
+        2.4168937670765445e-05
       ],
       "top_class": "rain"
     },
     "weather-shine.png": {
       "probabilities": [
-        0.0005059289978817105,
-        1.6484615343870246e-06,
-        0.9990792274475098,
-        0.0004131281457375735
+        5.056414238424622e-07,
+        4.654594487618624e-09,
+        0.9999946355819702,
+        4.918194463243708e-06
       ],
       "top_class": "shine"
     },
     "weather-sunrise.png": {
       "probabilities": [
-        3.5153927910869243e-06,
-        1.796025514977373e-07,
-        0.00011275362339802086,
-        0.9998835325241089
+        4.496683231991483e-06,
+        1.5553004217849775e-08,
+        4.3627864215523005e-05,
+        0.9999518394470215
       ],
       "top_class": "sunrise"
     },
     "oct-cnv.png": {
       "probabilities": [
-        0.9997583031654358,
-        2.0286772269173525e-05,
-        0.00021540516172535717,
-        6.064496119506657e-06
+        0.999994158744812,
+        2.9529306289077795e-07,
+        5.20399271408678e-06,
+        4.2317259385526995e-07
       ],
       "top_class": "CNV"
     },
     "oct-dme.png": {
       "probabilities": [
-        0.0007786015630699694,
-        0.9986936450004578,
-        0.00023472400789614767,
-        0.0002930705377366394
+        0.0003989171818830073,
+        0.9995620846748352,
+        3.5891316656488925e-05,
+        3.0283631531347055e-06
       ],
       "top_class": "DME"
     },
     "oct-drusen.png": {
       "probabilities": [
-        0.006144125945866108,
-        7.192499469965696e-05,
-        0.9935612678527832,
-        0.000222714981646277
+        0.006538363639265299,
+        9.091614629141986e-05,
+        0.9932551383972168,
+        0.00011554420052561909
       ],
       "top_class": "DRUSEN"
     },
     "oct-normal.png": {
       "probabilities": [
-        0.0006018403801135719,
-        0.001638125511817634,
-        0.005467893090099096,
-        0.9922921657562256
+        7.548944267909974e-06,
+        0.00030482173315249383,
+        0.0051867482252418995,
+        0.9945008754730225
       ],
       "top_class": "NORMAL"
     },
     "parking-empty.png": {
-      "decision_margin": -1.260441165502409,
+      "decision_margin": -1.3168277972161702,
       "class": "empty"
     },
     "parking-not_empty.png": {
-      "decision_margin": 0.8547156697147021,
+      "decision_margin": 1.0561890354252137,
       "class": "not_empty"
     }
+  },
+  "selection": {
+    "protocol": "Grouped evaluation; final test is excluded from fitting and epoch selection. Legacy checkpoints saw portions of regrouped weather/OCT/parking data and cannot provide independent comparison scores.",
+    "models": {
+      "weather": {
+        "checkpoint": "output/evaluation/training/weather-224/weights/best.pt",
+        "size": 224,
+        "kind": "classify",
+        "report": "weather-candidate",
+        "decision": "Prefer independently evaluated grouped training to contaminated legacy split."
+      },
+      "oct": {
+        "checkpoint": "output/evaluation/training/oct-128/weights/best.pt",
+        "size": 128,
+        "kind": "classify",
+        "report": "oct-candidate",
+        "decision": "Use patient-separated training and evaluation; no clinical validation."
+      },
+      "parking": {
+        "checkpoint": "output/evaluation/parking-grouped.joblib",
+        "size": 15,
+        "kind": "svm",
+        "report": "parking",
+        "decision": "Prefer grouped cross-validation and sequence separation; unseen cameras remain untested."
+      },
+      "alpaca": {
+        "checkpoint": "output/evaluation/training/alpaca-640/weights/best.pt",
+        "size": 640,
+        "kind": "detect",
+        "report": "alpaca-candidate",
+        "decision": "Fresh pretrained initialization; best development checkpoint. Frozen test mAP50 improved from 0.7655 to 0.8613 and mAP50-95 from 0.4479 to 0.6843. Negative-image false detections remain (3/6 at 0.35)."
+      },
+      "tiger": {
+        "checkpoint": "output/evaluation/training/tiger-320/weights/best.pt",
+        "size": 320,
+        "kind": "pose",
+        "report": "tiger-candidate",
+        "decision": "Publish as a separate limited prototype. Later-frame pose mAP50 is 0.9623, but stricter mAP50-95 is 0.2371. Approximate landmarks and same-video evaluation do not establish general animal pose estimation."
+      }
+    },
+    "pose": {
+      "keypoints": [
+        "nose",
+        "head",
+        "withers",
+        "tail_base",
+        "right_hind_hock",
+        "right_hind_paw",
+        "left_hind_paw",
+        "left_hind_hock",
+        "right_front_wrist",
+        "right_front_paw",
+        "left_front_wrist",
+        "left_front_paw"
+      ],
+      "skeleton": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    }
+  },
+  "tiger": {
+    "max_absolute_error": 0.0010223388671875,
+    "input_shape": [
+      1,
+      3,
+      320,
+      320
+    ],
+    "output_shape": [
+      1,
+      29,
+      2100
+    ],
+    "source_sha256": "e6445d46f9192307d10b74a57f2c60398d4aebc5d678aa6ef3c36119f06f4a7c"
   }
 }

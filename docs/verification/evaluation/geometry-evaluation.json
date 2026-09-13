@@ -1,0 +1,1987 @@
+{
+  "scope": "Synthetic rectangles, axis-aligned bounding-box IoU >= 0.7. Development seed 42, holdout seed 31415. Faces use IoU >= 0.3 on transformed images of one identity plus five negatives; not demographic or scene validation.",
+  "rectangle": {
+    "native_baseline": {
+      "cases": 200,
+      "tp": 153,
+      "fp": 58,
+      "fn": 7,
+      "negative_images": 40,
+      "false_positive_negative_images": 20,
+      "precision": 0.7251184834123223,
+      "recall": 0.95625,
+      "failures": [
+        {
+          "file": "rectangle-001.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-005.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-010.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-013.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-019.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-025.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-028.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-030.png",
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-031.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-037.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-041.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-047.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-051.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-070.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-078.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-080.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-084.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-086.png",
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-089.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-090.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-091.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-093.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-099.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-104.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-105.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-106.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-107.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-109.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-115.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-122.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-128.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-129.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-131.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-134.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-136.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-137.png",
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-141.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-142.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-147.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-153.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-157.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-159.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-000.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-001.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-002.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-003.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-004.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-005.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-006.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-007.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-008.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-009.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-010.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-011.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-012.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-013.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-014.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-015.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-016.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-017.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-018.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-019.png",
+          "fp": 1,
+          "fn": 0
+        }
+      ]
+    },
+    "native_development": {
+      "cases": 200,
+      "tp": 148,
+      "fp": 31,
+      "fn": 12,
+      "negative_images": 40,
+      "false_positive_negative_images": 0,
+      "precision": 0.8268156424581006,
+      "recall": 0.925,
+      "failures": [
+        {
+          "file": "rectangle-001.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-005.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-009.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-013.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-019.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-025.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-028.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-030.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-031.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-034.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-037.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-041.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-047.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-051.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-070.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-078.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-080.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-086.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-089.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-090.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-091.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-093.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-099.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-104.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-105.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-106.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-107.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-109.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-115.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-128.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-129.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-131.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-134.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-136.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-137.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-140.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-141.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-142.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-147.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-153.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-157.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-158.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-159.png",
+          "fp": 1,
+          "fn": 0
+        }
+      ]
+    },
+    "native_holdout": {
+      "cases": 200,
+      "tp": 149,
+      "fp": 29,
+      "fn": 11,
+      "negative_images": 40,
+      "false_positive_negative_images": 1,
+      "precision": 0.8370786516853933,
+      "recall": 0.93125,
+      "failures": [
+        {
+          "file": "rectangle-000.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-002.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-008.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-010.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-014.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-019.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-020.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-025.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-032.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-036.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-037.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-043.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-048.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-054.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-062.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-064.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-065.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-068.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-073.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-074.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-076.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-078.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-081.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-091.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-093.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-094.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-099.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-102.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-107.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-112.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-115.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-129.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-131.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-143.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-144.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-145.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-151.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-158.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-159.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "geometry-negative-030.png",
+          "fp": 1,
+          "fn": 0
+        }
+      ]
+    },
+    "browser_development": {
+      "cases": 200,
+      "tp": 128,
+      "fp": 1,
+      "fn": 32,
+      "negative_images": 40,
+      "false_positive_negative_images": 0,
+      "precision": 0.9922480620155039,
+      "recall": 0.8,
+      "failures": [
+        {
+          "file": "rectangle-012.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-015.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-019.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-025.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-026.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-028.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-039.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-041.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-057.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-058.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-066.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-070.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-078.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-080.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-085.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-086.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-087.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-090.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-093.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-096.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-097.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-099.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-105.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-115.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-120.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-123.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-134.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-135.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-137.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-142.png",
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "file": "rectangle-153.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-158.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-159.png",
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    "browser_holdout": {
+      "cases": 200,
+      "tp": 136,
+      "fp": 1,
+      "fn": 24,
+      "negative_images": 40,
+      "false_positive_negative_images": 0,
+      "precision": 0.9927007299270073,
+      "recall": 0.85,
+      "failures": [
+        {
+          "file": "rectangle-000.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-010.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-012.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-014.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-027.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-029.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-048.png",
+          "fp": 1,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-051.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-062.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-064.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-068.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-073.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-074.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-094.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-106.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-107.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-112.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-116.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-125.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-127.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-129.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-131.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-142.png",
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "file": "rectangle-158.png",
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    "browser_baseline": {
+      "cases": 200,
+      "tp": 74,
+      "fp": 0,
+      "fn": 86,
+      "precision": 1,
+      "recall": 0.4625,
+      "failures": [
+        {
+          "file": "rectangle-005.png",
+          "condition": {
+            "level": 100,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-008.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-009.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-010.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-012.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-013.png",
+          "condition": {
+            "level": 220,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-014.png",
+          "condition": {
+            "level": 150,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-015.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-016.png",
+          "condition": {
+            "level": 65,
+            "noise": 4,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-019.png",
+          "condition": {
+            "level": 65,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-021.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-022.png",
+          "condition": {
+            "level": 150,
+            "noise": 10,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-025.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-026.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-027.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-028.png",
+          "condition": {
+            "level": 220,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-031.png",
+          "condition": {
+            "level": 150,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-034.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-036.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-038.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-041.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-042.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-043.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-044.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-045.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-048.png",
+          "condition": {
+            "level": 65,
+            "noise": 4,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-050.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-051.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-055.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-057.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-058.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-059.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-060.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-062.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-070.png",
+          "condition": {
+            "level": 100,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-072.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-075.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-078.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-079.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-080.png",
+          "condition": {
+            "level": 150,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-082.png",
+          "condition": {
+            "level": 100,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-085.png",
+          "condition": {
+            "level": 220,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-086.png",
+          "condition": {
+            "level": 100,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-087.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-088.png",
+          "condition": {
+            "level": 65,
+            "noise": 4,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-089.png",
+          "condition": {
+            "level": 100,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-090.png",
+          "condition": {
+            "level": 150,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-092.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-093.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-098.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-099.png",
+          "condition": {
+            "level": 220,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-101.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-103.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-105.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-106.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-107.png",
+          "condition": {
+            "level": 100,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-111.png",
+          "condition": {
+            "level": 65,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-112.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-114.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-115.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-121.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-122.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-126.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-128.png",
+          "condition": {
+            "level": 100,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-129.png",
+          "condition": {
+            "level": 220,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-130.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-131.png",
+          "condition": {
+            "level": 100,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-132.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-134.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-137.png",
+          "condition": {
+            "level": 100,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-138.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-139.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-140.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-141.png",
+          "condition": {
+            "level": 220,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-142.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-143.png",
+          "condition": {
+            "level": 220,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-144.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 0
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-145.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-146.png",
+          "condition": {
+            "level": 45,
+            "noise": 4,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-147.png",
+          "condition": {
+            "level": 100,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-150.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-151.png",
+          "condition": {
+            "level": 45,
+            "noise": 0,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-153.png",
+          "condition": {
+            "level": 65,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-154.png",
+          "condition": {
+            "level": 65,
+            "noise": 10,
+            "blur": 1
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-158.png",
+          "condition": {
+            "level": 45,
+            "noise": 10,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "rectangle-159.png",
+          "condition": {
+            "level": 150,
+            "noise": 0,
+            "blur": 2
+          },
+          "fn": 1,
+          "fp": 0
+        }
+      ]
+    }
+  },
+  "face": {
+    "browser_yunet": {
+      "cases": 32,
+      "tp": 26,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9629629629629629,
+      "recall": 0.9629629629629629,
+      "failures": [
+        {
+          "file": "face-blur-9.png",
+          "condition": {
+            "blur": 9
+          },
+          "fn": 1,
+          "fp": 0
+        },
+        {
+          "file": "face-negative-alpaca.png",
+          "condition": {
+            "negative": true
+          },
+          "fn": 0,
+          "fp": 1
+        }
+      ]
+    },
+    "python_haar": {
+      "scope": "Manual visible-face rectangle on NASA astronaut image; transformed analytically. One identity only.",
+      "cases": 32,
+      "tp": 22,
+      "fp": 1,
+      "fn": 5
+    },
+    "python_yunet": {
+      "scope": "Manual visible-face rectangle on NASA astronaut image; transformed analytically. One identity only.",
+      "cases": 32,
+      "tp": 26,
+      "fp": 1,
+      "fn": 1
+    }
+  }
+}

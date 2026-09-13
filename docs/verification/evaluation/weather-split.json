@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "task": "weather",
+  "source": "imageclassification/weather_classifier/data",
+  "grouping": "decoded pixel hashes and conservative dHash distance <=4 components",
+  "counts": {
+    "train": {
+      "cloudy": 173,
+      "rain": 122,
+      "shine": 135,
+      "sunrise": 137
+    },
+    "val": {
+      "cloudy": 58,
+      "rain": 40,
+      "shine": 45,
+      "sunrise": 46
+    },
+    "test": {
+      "cloudy": 58,
+      "rain": 40,
+      "shine": 45,
+      "sunrise": 46
+    }
+  },
+  "legacy_comparison": "Original checkpoints saw training/validation images in these regrouped sets. Their scores are descriptive only; new candidate hold-outs are independent of candidate fitting.",
+  "manifest_sha256": "fe34060f987191331448336b9a009f14df57a227723dcaedf66090f4e6f84617",
+  "groups": {
+    "train": 516,
+    "val": 170,
+    "test": 171
+  },
+  "excluded_count": 157
+}

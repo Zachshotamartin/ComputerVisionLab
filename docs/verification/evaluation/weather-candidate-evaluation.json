@@ -1,0 +1,369 @@
+{
+  "task": "weather",
+  "checkpoint_sha256": "5348394a1b49a536147404d8efec0990b04bf80577c8c1f8f08009a417ce6f0b",
+  "input_size": 224,
+  "classes": [
+    "cloudy",
+    "rain",
+    "shine",
+    "sunrise"
+  ],
+  "split_manifest_sha256": "fe34060f987191331448336b9a009f14df57a227723dcaedf66090f4e6f84617",
+  "partitions": {
+    "val": {
+      "samples": 189,
+      "accuracy": 0.9576719576719577,
+      "balanced_accuracy": 0.9606571714142927,
+      "log_loss": 0.1313017356616324,
+      "expected_calibration_error": 0.026728762993736936,
+      "score_bins": [
+        {
+          "lower": 0.4,
+          "samples": 1,
+          "accuracy": 1.0,
+          "mean_score": 0.4360840618610382
+        },
+        {
+          "lower": 0.5,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "mean_score": 0.5294409692287445
+        },
+        {
+          "lower": 0.6000000000000001,
+          "samples": 3,
+          "accuracy": 0.3333333333333333,
+          "mean_score": 0.6465960741043091
+        },
+        {
+          "lower": 0.8,
+          "samples": 3,
+          "accuracy": 0.6666666666666666,
+          "mean_score": 0.8839428822199503
+        },
+        {
+          "lower": 0.9,
+          "samples": 176,
+          "accuracy": 0.9829545454545454,
+          "mean_score": 0.9947320978072557
+        }
+      ],
+      "confusion_matrix": [
+        [
+          54,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          42,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          45
+        ]
+      ],
+      "per_class": {
+        "cloudy": {
+          "precision": 0.9818181818181818,
+          "recall": 0.9310344827586207,
+          "f1": 0.9557522123893806,
+          "support": 58
+        },
+        "rain": {
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561,
+          "support": 40
+        },
+        "shine": {
+          "precision": 0.9130434782608695,
+          "recall": 0.9333333333333333,
+          "f1": 0.9230769230769231,
+          "support": 45
+        },
+        "sunrise": {
+          "precision": 0.9782608695652174,
+          "recall": 0.9782608695652174,
+          "f1": 0.9782608695652174,
+          "support": 46
+        }
+      },
+      "errors": [
+        {
+          "file": "val/cloudy/cloudy121.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.005862329620867968,
+            0.00013557757483795285,
+            0.9939976930618286,
+            4.31995658800588e-06
+          ]
+        },
+        {
+          "file": "val/cloudy/cloudy126.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.11678977310657501,
+            1.24218763630779e-06,
+            0.8832067847251892,
+            2.2410165456676623e-06
+          ]
+        },
+        {
+          "file": "val/cloudy/cloudy128.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.4905070662498474,
+            0.003929947968572378,
+            0.5047571063041687,
+            0.0008059385581873357
+          ]
+        },
+        {
+          "file": "val/cloudy/cloudy137.jpg",
+          "truth": 0,
+          "prediction": 1,
+          "scores": [
+            0.08942094445228577,
+            0.9019489884376526,
+            0.001255967072211206,
+            0.007374129723757505
+          ]
+        },
+        {
+          "file": "val/shine/shine143.jpg",
+          "truth": 2,
+          "prediction": 0,
+          "scores": [
+            0.6029200553894043,
+            5.685406904376578e-06,
+            0.397041380405426,
+            3.2940264645731077e-05
+          ]
+        },
+        {
+          "file": "val/shine/shine150.jpg",
+          "truth": 2,
+          "prediction": 1,
+          "scores": [
+            0.005761480890214443,
+            0.6865220069885254,
+            0.3048950731754303,
+            0.002821423579007387
+          ]
+        },
+        {
+          "file": "val/shine/shine252.jpg",
+          "truth": 2,
+          "prediction": 3,
+          "scores": [
+            4.2723227124952246e-06,
+            1.6021225519580184e-06,
+            0.0016903957584872842,
+            0.9983037710189819
+          ]
+        },
+        {
+          "file": "val/sunrise/sunrise35.jpg",
+          "truth": 3,
+          "prediction": 2,
+          "scores": [
+            0.1135411411523819,
+            6.803314317949116e-05,
+            0.5373777747154236,
+            0.3490130305290222
+          ]
+        }
+      ],
+      "seconds": 3.991184949874878
+    },
+    "test": {
+      "samples": 189,
+      "accuracy": 0.9629629629629629,
+      "balanced_accuracy": 0.9674579376978177,
+      "log_loss": 0.12814058516204646,
+      "expected_calibration_error": 0.020762256844333825,
+      "score_bins": [
+        {
+          "lower": 0.5,
+          "samples": 4,
+          "accuracy": 0.75,
+          "mean_score": 0.5353313833475113
+        },
+        {
+          "lower": 0.6000000000000001,
+          "samples": 2,
+          "accuracy": 0.5,
+          "mean_score": 0.6797670125961304
+        },
+        {
+          "lower": 0.8,
+          "samples": 9,
+          "accuracy": 0.8888888888888888,
+          "mean_score": 0.8559219903416104
+        },
+        {
+          "lower": 0.9,
+          "samples": 174,
+          "accuracy": 0.9770114942528736,
+          "mean_score": 0.990857218188801
+        }
+      ],
+      "confusion_matrix": [
+        [
+          53,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          44,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          45
+        ]
+      ],
+      "per_class": {
+        "cloudy": {
+          "precision": 1.0,
+          "recall": 0.9137931034482759,
+          "f1": 0.954954954954955,
+          "support": 58
+        },
+        "rain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 40
+        },
+        "shine": {
+          "precision": 0.88,
+          "recall": 0.9777777777777777,
+          "f1": 0.9263157894736842,
+          "support": 45
+        },
+        "sunrise": {
+          "precision": 0.9782608695652174,
+          "recall": 0.9782608695652174,
+          "f1": 0.9782608695652174,
+          "support": 46
+        }
+      },
+      "errors": [
+        {
+          "file": "test/cloudy/cloudy113.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.18821778893470764,
+            5.130139470566064e-06,
+            0.8117656707763672,
+            1.1449841622379608e-05
+          ]
+        },
+        {
+          "file": "test/cloudy/cloudy116.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.029673930257558823,
+            0.0001584030396770686,
+            0.964574933052063,
+            0.005592698231339455
+          ]
+        },
+        {
+          "file": "test/cloudy/cloudy120.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.4415607750415802,
+            0.0028137890622019768,
+            0.553922712802887,
+            0.0017027533613145351
+          ]
+        },
+        {
+          "file": "test/cloudy/cloudy127.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.045817889273166656,
+            0.0004628532624337822,
+            0.9516693949699402,
+            0.002049853326752782
+          ]
+        },
+        {
+          "file": "test/cloudy/cloudy213.jpg",
+          "truth": 0,
+          "prediction": 2,
+          "scores": [
+            0.009138456545770168,
+            5.04200579598546e-05,
+            0.9908100366592407,
+            1.0505244745218079e-06
+          ]
+        },
+        {
+          "file": "test/shine/shine236.jpg",
+          "truth": 2,
+          "prediction": 3,
+          "scores": [
+            0.25614306330680847,
+            0.000210430400329642,
+            0.05418120324611664,
+            0.689465343952179
+          ]
+        },
+        {
+          "file": "test/sunrise/sunrise47.jpg",
+          "truth": 3,
+          "prediction": 2,
+          "scores": [
+            8.825261375022819e-07,
+            2.2327334647798125e-07,
+            0.9217352271080017,
+            0.07826370000839233
+          ]
+        }
+      ],
+      "seconds": 5.641834020614624
+    }
+  },
+  "test_uncertainty": {
+    "method": "2000 seeded bootstrap resamples of whole duplicate/patient groups",
+    "groups": 171,
+    "accuracy_95_interval": [
+      0.9340645395213923,
+      0.9893062350665605
+    ]
+  }
+}

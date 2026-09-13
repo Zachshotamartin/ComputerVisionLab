@@ -1,0 +1,74 @@
+{
+  "scope": "Six curated images without the target animal. This is a small negative sanity check, not open-world validation.",
+  "threshold": 0.35,
+  "nms_iou": 0.45,
+  "false_positive_images": 3,
+  "records": [
+    {
+      "file": "web/assets/model-examples/weather-cloudy.png",
+      "sha256": "10821e231cfc74d71606fbbff2e9fc491731d3778e4b5e4c4f4fdf81a85e1e8f",
+      "detections": [
+        {
+          "name": "alpaca",
+          "class": 0,
+          "confidence": 0.5817,
+          "box": {
+            "x1": 8.23953,
+            "y1": 0.0,
+            "x2": 763.83002,
+            "y2": 512.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "web/assets/model-examples/weather-rain.png",
+      "sha256": "323ecdf38faa74cf85378eb8f1f7cb11155329ad4822d01a257c46f3eb6e3a15",
+      "detections": []
+    },
+    {
+      "file": "web/assets/model-examples/weather-shine.png",
+      "sha256": "a903e79df4553f6612a1b3aaae6bf8bf3320866de365d4227b4c198f9ee45849",
+      "detections": [
+        {
+          "name": "alpaca",
+          "class": 0,
+          "confidence": 0.56442,
+          "box": {
+            "x1": 11.6042,
+            "y1": 0.0,
+            "x2": 745.75183,
+            "y2": 432.0
+          }
+        }
+      ]
+    },
+    {
+      "file": "web/assets/model-examples/weather-sunrise.png",
+      "sha256": "104ffc092b5b2063b58f629c149109413c3513c811a59762fee5acde50742ceb",
+      "detections": []
+    },
+    {
+      "file": "web/assets/model-examples/face.png",
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "detections": []
+    },
+    {
+      "file": "web/assets/bird.webp",
+      "sha256": "5ab4667ce62027ec48763e2dac3243a947f700b4fc49b68194a0b8caa2f3288f",
+      "detections": [
+        {
+          "name": "alpaca",
+          "class": 0,
+          "confidence": 0.81613,
+          "box": {
+            "x1": 176.02148,
+            "y1": 51.19545,
+            "x2": 656.9845,
+            "y2": 490.24622
+          }
+        }
+      ]
+    }
+  ]
+}

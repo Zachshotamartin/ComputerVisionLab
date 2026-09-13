@@ -2,12 +2,14 @@
   "version": 1,
   "models": {
     "weather": {
-      "file": "weather-cc12fcf108a4.onnx",
-      "bytes": 5778068,
-      "sha256": "cc12fcf108a49c8783fa9805dafe807884ada4207ca6641a5d8ce6b0938218eb",
-      "source": "imageclassification/weather_classifier/runs/classify/train/weights/best.pt",
+      "file": "weather-ffca78a69efb.onnx",
+      "bytes": 5778082,
+      "sha256": "ffca78a69efb0a8c83df86a0bcb80715b7a8af5dd31448fb7e09b98f213f6083",
+      "source": "output/evaluation/training/weather-224/weights/best.pt",
+      "revision": "grouped-evaluation-2026-09-12",
+      "trainingSha": "5348394a1b49a536147404d8efec0990b04bf80577c8c1f8f08009a417ce6f0b",
       "kind": "classify",
-      "size": 64,
+      "size": 224,
       "classes": [
         "cloudy",
         "rain",
@@ -17,12 +19,14 @@
       "preprocess": "center-crop-rgb-0-1"
     },
     "oct": {
-      "file": "oct-b0f762e9b469.onnx",
-      "bytes": 5778066,
-      "sha256": "b0f762e9b469aae23d3260e63b52bbc9d9d421a996ed5e61ee4c218e58e5436e",
-      "source": "imageclassification/pneumonia_classifier/runs/classify/train/weights/best.pt",
+      "file": "oct-0ca9910591a9.onnx",
+      "bytes": 5778074,
+      "sha256": "0ca9910591a95c013c0e6743ea8dc9e3df2bcdc0a1da5d29a8af77c689246083",
+      "source": "output/evaluation/training/oct-128/weights/best.pt",
+      "revision": "grouped-evaluation-2026-09-12",
+      "trainingSha": "6614cd6d81971e1aa5d17b0b10a3cb8b042665e43ff03498731935a2216da096",
       "kind": "classify",
-      "size": 64,
+      "size": 128,
       "classes": [
         "CNV",
         "DME",
@@ -32,10 +36,12 @@
       "preprocess": "center-crop-rgb-0-1"
     },
     "alpaca": {
-      "file": "alpaca-0dbbf90ad9d0.onnx",
-      "bytes": 12238751,
-      "sha256": "0dbbf90ad9d04454f038a7c563ca961c6ab51890b83ea32294f1cc9998cb4927",
-      "source": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/runs/detect/train3/weights/best.pt",
+      "file": "alpaca-a9a1d3aca71b.onnx",
+      "bytes": 12238855,
+      "sha256": "a9a1d3aca71b430a4d88de45efde7d9bbd38930c881b22f28355a13f44733a6f",
+      "source": "output/evaluation/training/alpaca-640/weights/best.pt",
+      "revision": "grouped-evaluation-2026-09-12",
+      "trainingSha": "15033585248bbbfd5a6e82f0aa47948ac586d59dd2db16417074fca670f9583b",
       "kind": "detect",
       "size": 640,
       "classes": [
@@ -44,10 +50,12 @@
       "preprocess": "letterbox-rgb-0-1"
     },
     "parking": {
-      "file": "parking-32ca05c04da2.json",
-      "bytes": 1244956,
-      "sha256": "32ca05c04da2797a76c742508ebdd4eb2ee5a7c2ae18541fdf2bc6617a99fc2d",
-      "source": "output/parking.joblib",
+      "file": "parking-209cf5d9eca5.bin",
+      "bytes": 1397442,
+      "sha256": "209cf5d9eca5a1142207cd7b4df1cc0d97737664c28816006eb3ca02987e47d8",
+      "source": "output/evaluation/parking-grouped.joblib",
+      "revision": "grouped-evaluation-2026-09-12",
+      "trainingSha": "52ab933e142577bd098eaa80115ce724f718aa0c64d81ae81a846abd633ca52a",
       "kind": "svm",
       "size": 15,
       "classes": [
@@ -67,6 +75,80 @@
       ],
       "preprocess": "letterbox-bgr-0-255",
       "source": "https://github.com/opencv/opencv_zoo/tree/47534e27c9851bb1128ccc0102f1145e27f23f98/models/face_detection_yunet"
+    },
+    "tiger": {
+      "file": "tiger-d7e81dcba967.onnx",
+      "bytes": 12602950,
+      "sha256": "d7e81dcba967ed99f63d1a0c55afb365628658b90c92de3b4d0254f483e6d22a",
+      "source": "output/evaluation/training/tiger-320/weights/best.pt",
+      "revision": "grouped-evaluation-2026-09-12",
+      "trainingSha": "e6445d46f9192307d10b74a57f2c60398d4aebc5d678aa6ef3c36119f06f4a7c",
+      "kind": "pose",
+      "size": 320,
+      "classes": [
+        "tiger"
+      ],
+      "preprocess": "letterbox-rgb-0-1",
+      "keypoints": [
+        "nose",
+        "head",
+        "withers",
+        "tail_base",
+        "right_hind_hock",
+        "right_hind_paw",
+        "left_hind_paw",
+        "left_hind_hock",
+        "right_front_wrist",
+        "right_front_paw",
+        "left_front_wrist",
+        "left_front_paw"
+      ],
+      "skeleton": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ]
     }
   },
   "sources": {},
@@ -133,6 +215,7 @@
         "label": "Alpacas",
         "source": "objectdetection/alpacadetector/train-yolov8-custom-dataset-step-by-step-guide/data/images/test/ec522d35b7604195.jpg"
       }
-    ]
+    ],
+    "tiger": []
   }
 }
